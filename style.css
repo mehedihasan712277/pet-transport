@@ -1,3 +1,7 @@
 .active {
     color: aqua;
 }
+
+.navBg {
+    background-color: rgb(9, 0, 34);
+}

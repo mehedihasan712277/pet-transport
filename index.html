@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <header class="section py-10 px-4 md:px-12 lg:px-20 relative min-h-screen" id="home">
+    <header
+        class="section py-10 px-4 md:px-12 lg:px-20 relative min-h-screen bg-bg bg-cover bg-center bg-no-repeat select-none"
+        id="home">
         <!-- ---------------------------------------navigation bar----------------------------------------- -->
         <nav
-            class="flex items-center justify-between py-5 md:py-10 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20 bg-white">
-            <div class="w-14 h-14">
-                <img src="./images/logo.jpg" alt="logo" class="w-full h-full">
+            class="flex items-center justify-between py-5 md:py-10 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20">
+            <div class="w-14 h-14 rounded-full">
+                <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
             </div>
             <!-- menu on large device -->
-            <ul class="menuLink ml:flex gap-4 hidden">
+            <ul class="menuLink ml:flex gap-4 hidden text-white">
                 <li><a class="lg:text-xl transition-all font-semibold hover:text-[aqua] active" href="#home">Home</a>
                 </li>
                 <li><a class="lg:text-xl transition-all font-semibold hover:text-[aqua]" href="#about">About</a></li>
@@ -46,17 +48,20 @@
         </nav>
         <!-- ---------------------------------------banner part------------------------------------------- -->
         <div class="flex flex-col items-center mt-40">
-            <h1 class="text-center text-3xl ml:text-4xl sm:text-5xl lg:text-7xl  font-bold">Welcome to
+            <h1 class="text-center text-white text-3xl ml:text-4xl sm:text-5xl lg:text-7xl  font-bold">Welcome to
                 <br>
                 PET TRANSPORT
                 BD
             </h1>
-            <h2 class="text-center ml:text-xl sm:text-2xl lg:text-3xl mt-1 md:mt-2 lg:mt-3 mb-5 lg:mb-16">Get any
+            <h2 class="text-center text-gray-300 ml:text-xl sm:text-2xl lg:text-3xl mt-1 md:mt-2 lg:mt-3 mb-5 lg:mb-16">
+                Get any
                 solution of
                 your pet</h2>
-            <button class="btn">
-                <a href="#service">Get Started</a>
-            </button>
+            <a href="#service">
+                <button class="btn font-bold">
+                    Get Started
+                </button>
+            </a>
         </div>
     </header>
     <!-- for testing purpose -->

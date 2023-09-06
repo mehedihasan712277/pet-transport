@@ -7,7 +7,7 @@ let hideMenuBar = () => {
     document.getElementById("sideMenuBar").style.width = "0px";
 }
 
-//change style on scroll
+//change of color of links on scroll
 let sections = document.querySelectorAll('.section');
 let navLinks = document.querySelectorAll('nav .menuLink li a');
 
@@ -27,3 +27,12 @@ window.onscroll = () => {
         }
     });
 }
+
+//change of background of navbar on scroll
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 136) {
+        document.querySelector("nav").classList.add("navBg");
+    } else {
+        document.querySelector("nav").classList.remove("navBg");
+    }
+})

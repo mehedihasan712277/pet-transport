@@ -3,6 +3,9 @@ module.exports = {
   content: ["*"],
   theme: {
     extend: {
+      backgroundImage: {
+        'bg': "linear-gradient(rgba(0,0,50,0.7), rgba(0,0,0,0.9)), url('../images/bg.jpg')"
+      },
       screens: {
         "ms": "320px",
         "mm": "375px",
