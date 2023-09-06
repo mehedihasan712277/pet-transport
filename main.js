@@ -30,7 +30,7 @@ window.onscroll = () => {
 
 //change of background of navbar on scroll
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 136) {
+    if (window.scrollY > 40) {
         document.querySelector("nav").classList.add("navBg");
     } else {
         document.querySelector("nav").classList.remove("navBg");
