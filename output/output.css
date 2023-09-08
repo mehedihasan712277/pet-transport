@@ -1288,6 +1288,10 @@ html {
   margin-top: 10rem;
 }
 
+.mt-32 {
+  margin-top: 8rem;
+}
+
 .flex {
   display: flex;
 }
@@ -1424,6 +1428,21 @@ html {
   padding-bottom: 1.25rem;
 }
 
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1531,6 +1550,10 @@ html {
 }
 
 @media (min-width: 640px) {
+  .sm\:min-h-screen {
+    min-height: 100vh;
+  }
+
   .sm\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1550,6 +1573,14 @@ html {
 @media (min-width: 768px) {
   .md\:mt-2 {
     margin-top: 0.5rem;
+  }
+
+  .md\:mt-40 {
+    margin-top: 10rem;
+  }
+
+  .md\:min-h-screen {
+    min-height: 100vh;
   }
 
   .md\:flex-row {
