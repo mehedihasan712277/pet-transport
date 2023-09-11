@@ -21,12 +21,13 @@
             </div>
             <!-- menu on large device -->
             <ul class="menuLink ml:flex gap-4 hidden text-white">
-                <li><a class="lg:text-xl transition-all font-semibold active" href="#home">Home</a>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold active" href="#home">Home</a>
                 </li>
-                <li><a class="lg:text-xl transition-all font-semibold " href="#about">About</a></li>
-                <li><a class="lg:text-xl transition-all font-semibold " href="#service">Service</a>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#about">About</a>
                 </li>
-                <li><a class="lg:text-xl transition-all font-semibold " href="#contact">Contact</a>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#service">Service</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#contact">Contact</a>
                 </li>
             </ul>
             <!-- menu on small device -->
@@ -77,8 +78,9 @@
             <!-- about info -->
             <div class="flex-1">
                 <div class="flex flex-col items-center md:items-start">
-                    <p class="text-[#0ab99c] text-2xl font-bold text-center md:text-left">Pet
-                        Transport BD</p>
+                    <p class="text-[#0ab99c] text-2xl font-bold text-center md:text-left">
+                        Pet Transport BD
+                    </p>
                     <p
                         class="text-gray-500 mb-4 mt-2 border-t-2 border-[#0ab99c] text-center md:text-left sm:w-fit text-sm xl:text-xl">
                         Your
@@ -86,15 +88,37 @@
                         Best Companion in
                         Bangladesh</p>
                 </div>
-                <p class="text-gray-400 text-justify text-xs xl:text-sm">
-                    Welcome to PET Transport, your one-stop destination for all your pet-related needs in Bangladesh. We
-                    are more than just
-                    a transport service; we are your pet's best friend and a trusted partner in their well-being.
-                    We offer pet transport services, pet accessories, pet healthcare, foster home, pet medications.
-                    Our mission is to ensure the happiness, health, and safety of your beloved pets while offering
-                    convenience and peace of
-                    mind to pet owners across Bangladesh
-                </p>
+                <div class="text-gray-400 text-justify text-xs xl:text-sm">
+                    Welcome to Pet Transport BD, your trusted partner in pet care since our establishment in 2021. With
+                    a thriving community
+                    of over 5000+ devoted pet lovers, we've proudly served 500+ clients and continue to uphold our
+                    vision of making all
+                    types of pet solutions seamless, easy, and affordable.
+
+                    <!-- hidden text (can be shown by clicking 'read more' btn) -->
+                    <div class="h-0 overflow-hidden" id="hiddenText">
+                        At Pet Transport BD, we understand the profound bond between pets and their owners. Our
+                        commitment
+                        is to provide
+                        comprehensive services that ensure the well-being and happiness of your furry companions.
+                        Whether
+                        it's safe and
+                        comfortable pet transport, reliable boarding options, or expert guidance on pet care, we're here
+                        to
+                        make your
+                        pet-related needs hassle-free.
+
+                        Join our community and experience the difference that Pet Transport BD brings to pet care. With
+                        our
+                        dedicated team and a
+                        passion for pets, we aim to make your journey with your beloved animals as enjoyable and
+                        stress-free
+                        as possible.
+                        Welcome to a world where pets are our priority, and their happiness is our mission.
+                    </div>
+                    <span id="readMoreBtn" class="text-[#0ab99c] font-bold select-none cursor-pointer">Read
+                        More...</span>
+                </div>
             </div>
         </div>
     </main>

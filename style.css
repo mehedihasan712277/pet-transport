@@ -9,3 +9,7 @@
 .navBg {
     background-color: rgb(9, 0, 34);
 }
+
+.hiddenText {
+    height: auto;
+}

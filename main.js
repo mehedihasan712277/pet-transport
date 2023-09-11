@@ -36,3 +36,11 @@ window.addEventListener("scroll", () => {
         document.querySelector("nav").classList.remove("navBg");
     }
 })
+
+// toggle text using read more button
+let toggleText = () => {
+    document.getElementById("hiddenText").classList.toggle("hiddenText");
+    let text = document.getElementById("readMoreBtn");
+    text.innerText = (text.innerText === "Read More...") ? text.innerText = "Read Less" : "Read More...";
+}
+document.getElementById("readMoreBtn").onclick = toggleText;
