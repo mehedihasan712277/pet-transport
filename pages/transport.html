@@ -6,29 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport</title>
     <link rel="stylesheet" href="../output/output.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <div>
+    <div class="bg">
         <div>
-            <p class="font-bold">Transport</p>
-            <p>Have a safe journey</p>
+            <p class="text-center font-bold text-3xl">Transport</p>
+            <p class="text-center font-semibold">We ensure safe journey of your pet</p>
+            <br>
         </div>
         <!-- --------transport form-------- -->
-        <div>
-            <form>
+        <div class="flex justify-center">
+            <form class="font-semibold">
                 <!-- gender -->
                 <div>
                     <span>Gender : </span>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">Male</label>
-                    <input type="radio" id="css" name="fav_language" value="CSS">
-                    <label for="css">Female</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
                 </div>
                 <!-- type -->
                 <div>
                     <label for="cars">Type : </label>
-                    <select id="cars">
+                    <select id="type" name="type">
                         <option value="Dog">Dog</option>
                         <option value="cat">Cat</option>
                         <option value="rabbit">Rabbit</option>
@@ -45,33 +47,36 @@
                 </div>
                 <!-- age -->
                 <div>
-                    <span>Age :</span>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">0-6month</label>
-                    <input type="radio" id="css" name="fav_language" value="CSS">
-                    <label for="css">6-14month</label>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">14-20month+</label>
+                    <span>Age (month):</span>
+                    <input type="radio" id="small" name="age" value="small">
+                    <label for="small">0-6</label>
+                    <input type="radio" id="mid" name="age" value="mid">
+                    <label for="mid">6-14</label>
+                    <input type="radio" id="old" name="age" value="old">
+                    <label for="old">14-20+</label>
                 </div>
                 <!-- size -->
                 <div>
                     <span>size</span>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">Big</label>
-                    <input type="radio" id="css" name="fav_language" value="CSS">
-                    <label for="css">Medium</label>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">Small</label>
+                    <input type="radio" id="big" name="size" value="big">
+                    <label for="big">Big</label>
+                    <input type="radio" id="medium" name="size" value="medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" id="small" name="size" value="small">
+                    <label for="small">Small</label>
                 </div>
                 <!-- vaccinated -->
                 <div>
                     <span>Vaccinated</span>
-                    <input type="radio" id="html" name="fav_language" value="HTML">
-                    <label for="html">Yes</label>
-                    <input type="radio" id="css" name="fav_language" value="CSS">
-                    <label for="css">No</label>
+                    <input type="radio" id="yes" name="vaccinated" value="true">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="vaccinated" value="false">
+                    <label for="no">No</label>
                 </div>
-                <input type="submit" class="btn">
+                <div class="text-center">
+                    <br>
+                    <input type="submit" class="btn">
+                </div>
             </form>
         </div>
     </div>
