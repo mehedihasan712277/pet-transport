@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./output/output.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -21,7 +22,8 @@
                 <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
             </div>
             <!-- menu on large device -->
-            <ul class="menuLink ml:flex gap-4 hidden text-white">
+
+            <ul class="menuLink ml:flex gap-4 hidden sm:flex text-white">
                 <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold active" href="#home">Home</a>
                 </li>
                 <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#service">Service</a>
@@ -32,11 +34,17 @@
                 </li>
             </ul>
             <!-- menu on small device -->
-            <button class="btn ml:hidden" onclick="showMenubar()">Menu</button>
+            <button title="menu" class="text-white sm:hidden" onclick="showMenubar()">
+                <i class="fa-solid fa-bars"></i>
+
+
+            </button>
             <ul class="w-0 overflow-x-hidden bg-gray-800 flex flex-col gap-4 items-center absolute top-0 right-0 min-h-screen transition-all"
                 id="sideMenuBar">
                 <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-bold w-full ">
-                    <button class="m-4 ">x</button>
+                    <button class="m-4 ">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </li>
                 <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
                         href="#home">Home</a></li>
@@ -286,7 +294,33 @@
                 </div>
             </div>
         </div>
-        <div id="contact" class="section h-screen flex items-center justify-center text-6xl">contact</div>
+        <!-- <div id="contact" class="section h-screen flex items-center justify-center text-6xl">
+
+
+        </div> -->
+
+        <!-- contact part -->
+        <!-- contact from -->
+
+        <div id="contact" class="section py-10  md:py-20 px-4 md:px-14 lg:px-32">
+            <p class="text-center font-bold text-2xl md:text-5xl text-[#06b6d4]">Contact Us</p>
+            <p class="font-semibold text-center max-w-2xl mt-3 mb-6 md:mt-6 md:mb-12 text-gray-600 mx-auto px-4">We are
+                always there to
+                provide any
+                solution to
+                your
+                pet. Feel free to
+                contact us for any
+                query</p>
+            <form action="" class="flex flex-col gap-4 max-w-2xl mx-auto">
+                <input type="text" placeholder="Name" class=" border px-3 py-2 rounded outline-none">
+                <input type="email" placeholder="Email" class=" border px-3 py-2 rounded outline-none">
+                <input type="text" placeholder="Subject" class=" border px-3 py-2 rounded outline-none">
+                <textarea name="" id="" cols="30" rows="6" placeholder="Message"
+                    class=" border px-3 py-2 rounded outline-none"></textarea>
+                <button class="btn bg-[#06b6d4] text-white hover:text-black">Send</button>
+            </form>
+        </div>
     </main>
     <div class="footer p-10 bg-cyan-500 text-base-content">
         <nav>
