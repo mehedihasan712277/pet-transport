@@ -7,28 +7,120 @@
     <title>Transport</title>
     <link rel="stylesheet" href="../output/output.css">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div class="bg">
-        <div>
+
+    <!-- ---------------------------------------navigation bar----------------------------------------- -->
+
+    <header class="section  px-4 md:px-12 lg:px-20 relative  z-10   bg-cyan-500  select-none " id="home">
+        <nav
+            class="bg-cyan-500 flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20">
+            <div class="w-14 h-14 rounded-full">
+
+                <a href="/">
+                    <img src="../images/logo1.png" alt="logo" class="w-full h-full rounded-full">
+                </a>
+            </div>
+            <!-- menu on large device -->
+
+            <ul class="menuLink ml:flex  gap-4 hidden sm:flex text-white">
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold active" href="/">Home</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                        href="/#service">Service</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="/#about">About</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                        href="/#contact">Contact</a>
+                </li>
+            </ul>
+            <!-- menu on small device -->
+            <button title="menu" class="text-white sm:hidden" onclick="showMenubar()">
+                <i class="fa-solid fa-bars"></i>
+
+
+            </button>
+            <ul class="w-0 overflow-x-hidden bg-gray-800 flex flex-col gap-4 items-center absolute top-0 right-0 min-h-screen transition-all"
+                id="sideMenuBar">
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-bold w-full ">
+                    <button class="m-4 ">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#home">Home</a>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#about">About</a>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#service">Service</a></li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="mt-[100px]  container mx-auto shadow-lg rounded-lg">
+        <div class="pt-8">
             <p class="text-center font-bold text-3xl">Transport</p>
             <p class="text-center font-semibold">We ensure safe journey of your pet</p>
             <br>
         </div>
         <!-- --------transport form-------- -->
-        <div class="flex justify-center">
-            <form class="font-semibold">
+        <div class="flex justify-center pb-12">
+            <form class="">
+
                 <!-- gender -->
-                <div>
-                    <span>Gender : </span>
+
+                <div class="flex w-full gap-2 mb-3">
+                    <div class="w-24">
+                        <p>Gender</p>
+                    </div>
+                    <span>:</span>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <!-- gender -->
+                <!-- <div>
+                    <span class="">Gender : </span>
                     <input type="radio" id="male" name="gender" value="male">
                     <label for="male">Male</label>
                     <input type="radio" id="female" name="gender" value="female">
                     <label for="female">Female</label>
+                </div> -->
+
+                <!-- type -->
+
+                <div class="flex gap-2 mb-3 w-full">
+                    <div class="w-24">
+                        <p>Type</p>
+                    </div>
+                    <span>:</span>
+                    <div>
+                        <select class="bg-inherit outline-none cursor-pointer" id="type" name="type">
+                            <option value="Dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="rabbit">Rabbit</option>
+                            <option value="guineapig">Guinea Pig</option>
+                            <option value="bird">Bird</option>
+                            <option value="fish">Fish</option>
+                            <option value="sugarglider">Sugar Glider</option>
+                            <option value="hamster">Hamster</option>
+                        </select>
+                    </div>
                 </div>
                 <!-- type -->
-                <div>
+                <!-- <div>
                     <label for="cars">Type : </label>
                     <select id="type" name="type">
                         <option value="Dog">Dog</option>
@@ -40,13 +132,16 @@
                         <option value="sugarglider">Sugar Glider</option>
                         <option value="hamster">Hamster</option>
                     </select>
-                </div>
+                </div> -->
                 <!-- breed -->
-                <div>
+                <!-- <div>
 
-                </div>
+                </div> -->
+
+
+
                 <!-- age -->
-                <div>
+                <!-- <div>
                     <span>Age (month):</span>
                     <input type="radio" id="small" name="age" value="small">
                     <label for="small">0-6</label>
@@ -54,9 +149,30 @@
                     <label for="mid">6-14</label>
                     <input type="radio" id="old" name="age" value="old">
                     <label for="old">14-20+</label>
+                </div> -->
+
+
+                <!-- age -->
+                <div class="flex w-full gap-2 mb-3">
+                    <div class="w-24">
+                        <p>Age (month)</p>
+                    </div>
+
+                    <span>:</span>
+                    <div>
+                        <select class="bg-inherit outline-none cursor-pointer" id="type" name="age">
+                            <option value="small">0-6</option>
+                            <option value="medium">6-14</option>
+                            <option value="old">14-20+</option>
+
+                        </select>
+                    </div>
                 </div>
+
+
+
                 <!-- size -->
-                <div>
+                <!-- <div>
                     <span>size</span>
                     <input type="radio" id="big" name="size" value="big">
                     <label for="big">Big</label>
@@ -64,18 +180,52 @@
                     <label for="medium">Medium</label>
                     <input type="radio" id="small" name="size" value="small">
                     <label for="small">Small</label>
+                </div> -->
+
+
+                <!-- size -->
+                <div class="flex w-full gap-2 mb-3">
+                    <div class="w-24">
+                        <p>Size</p>
+                    </div>
+                    <span>:</span>
+                    <div>
+                        <input type="radio" id="big" name="size" value="big">
+                        <label for="big">Big</label>
+                        <input type="radio" id="medium" name="size" value="medium">
+                        <label for="medium">Medium</label>
+                        <input type="radio" id="small" name="size" value="small">
+                        <label for="small">Small</label>
+                    </div>
                 </div>
+
+
                 <!-- vaccinated -->
-                <div>
+                <!-- <div>
                     <span>Vaccinated</span>
                     <input type="radio" id="yes" name="vaccinated" value="true">
                     <label for="yes">Yes</label>
                     <input type="radio" id="no" name="vaccinated" value="false">
                     <label for="no">No</label>
+                </div> -->
+
+                <!-- vaccinated -->
+
+                <div class="flex w-full gap-2">
+                    <div class="w-24">
+                        <p>Vaccinated</p>
+                    </div>
+                    <span>:</span>
+                    <div>
+                        <input type="radio" id="yes" name="vaccinated" value="true">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="vaccinated" value="false">
+                        <label for="no">No</label>
+                    </div>
                 </div>
                 <div class="text-center">
                     <br>
-                    <input type="submit" class="btn">
+                    <input type="submit" class="btn border border-cyan-500 w-full hover:bg-cyan-500 hover:text-white ">
                 </div>
             </form>
         </div>
