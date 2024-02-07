@@ -8,7 +8,8 @@
 }
 
 .navBg {
-    background-color: #06b6d4;
+    /* background-color: #06b6d4; */
+    background-image: linear-gradient(to right, #10b3c9, #3b82f6);
 }
 
 .hiddenText {
