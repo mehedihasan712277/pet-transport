@@ -1,26 +1,51 @@
 .active {
-    /* color: #104ca2; */
-    /* color: rgb(0, 255, 255); */
-    /* color: #2ee6a8; */
-    /* color: #1cb69e; */
-    /* color: #0ab99c; */
-    color: rgb(11, 1, 39);
+  /* color: #104ca2; */
+  /* color: rgb(0, 255, 255); */
+  /* color: #2ee6a8; */
+  /* color: #1cb69e; */
+  /* color: #0ab99c; */
+  color: rgb(11, 1, 39);
 }
 
 .navBg {
-    /* background-color: #06b6d4; */
-    background-image: linear-gradient(to right, #10b3c9, #3b82f6);
+  /* background-image: linear-gradient(to right, #10b3c9, #3b82f6); */
+
+  /* background-color: #111827; */
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navBg ul li {
+  color: black;
+}
+
+.navBg .active {
+  color: #3a83f5;
+}
+
+.navBg .fa-bars {
+  color: black;
 }
 
 .hiddenText {
-    height: auto;
+  height: auto;
 }
 
 .bg {
-    background-color: rgb(184, 239, 253);
-    width: 80%;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 8px;
-    padding: 40px 5px;
+  background-color: rgb(184, 239, 253);
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 8px;
+  padding: 40px 5px;
+}
+
+.home-banner {
+  background-image: url("./images/cats.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
