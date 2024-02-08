@@ -8,8 +8,23 @@
 }
 
 .navBg {
-  /* background-color: #06b6d4; */
-  background-image: linear-gradient(to right, #10b3c9, #3b82f6);
+  /* background-image: linear-gradient(to right, #10b3c9, #3b82f6); */
+
+  /* background-color: #111827; */
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navBg ul li {
+  color: black;
+}
+
+.navBg .active {
+  color: #3a83f5;
+}
+
+.navBg .fa-bars {
+  color: black;
 }
 
 .hiddenText {
