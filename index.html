@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -17,24 +18,25 @@
     <!-- <header
         class="section py-20 px-4 md:px-12 lg:px-20 relative  z-10   bg-gradient-to-r from-cyan-500 to-blue-500  select-none sm:min-h-screen"
         id="home"> -->
-    <header class="section px-4 md:px-12 lg:px-20 relative  z-10    select-none " id="home">
+    <header class="section px-4 md:px-12 lg:px-20 relative   select-none " id="home">
         <!-- ---------------------------------------navigation bar----------------------------------------- -->
-        <nav class="  flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20">
+        <nav
+            class="  flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20 z-[2000]">
             <div class="w-14 h-14 rounded-full">
                 <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
             </div>
             <!-- menu on large device -->
 
             <ul class="menuLink ml:flex gap-4 hidden sm:flex text-white">
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#home">Home</a>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#home">Home</a>
                 </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#service">Service</a>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#service">Service</a>
                 </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#about">About</a>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#about">About</a>
                 </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#">Blog</a>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#">Blog</a>
                 </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold"
                         href="./pages/authentication/signup.html">Register</a>
                 </li>
             </ul>
@@ -85,32 +87,52 @@
 
 
     <!-- ---------------------------------------banner part------------------------------------------- -->
-    <div class="flex flex-col items-center justify-center items-center pt-[96px] home-banner md:h-screen
-    h-[calc(100vh-200px)] 
-    ">
+    <div class="relative">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide h-[70vh] md:h-screen">
+                    <img src="https://i.ibb.co/SrDhKhg/pet1.jpg" alt="img" class="overlay">
+                </div>
+                <div class="swiper-slide h-[70vh] md:h-screen">
+                    <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img" class="overlay">
+                </div>
+                <div class="swiper-slide h-[70vh] md:h-screen">
+                    <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="img" class="overlay">
+                </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+        </div>
 
-        <!-- <div>
-            <img src="./images/cats.png" alt="logo" class="w-full ">
-        </div> -->
 
-        <!-- <div> -->
-        <h1 class="text-center text-white text-3xl ml:text-4xl sm:text-5xl lg:text-7xl  font-bold">Welcome to
-            <br>
-            PET TRANSPORT
-            BD
-        </h1>
-        <h2 class="text-center text-white ml:text-xl sm:text-2xl lg:text-3xl mt-1 md:mt-2 lg:mt-3 mb-5 lg:mb-16">
-            Get any
-            solution of
-            your pet</h2>
-        <a href="#service">
-            <button
-                class="btn text-black font-bold bg-white border-2 border-solid border-white hover:text-white hover:bg-transparent">
-                Get Started
-            </button>
-        </a>
-        <!-- </div> -->
+        <!-- h-[calc(100vh-200px)] -->
+        <div class="absolute z-[1000] w-full top-0 flex flex-col items-center justify-center items-center pt-[96px] home-banner h-[70vh] md:h-screen
+         
+        ">
 
+            <!-- <div>
+                <img src="./images/cats.png" alt="logo" class="w-full ">
+            </div> -->
+
+            <!-- <div> -->
+            <h1 class="text-center text-white text-3xl ml:text-4xl sm:text-5xl lg:text-7xl  font-bold">Welcome to
+                <br>
+                PET TRANSPORT
+                BD
+            </h1>
+            <h2 class="text-center text-white ml:text-xl sm:text-2xl lg:text-3xl mt-1 md:mt-2 lg:mt-3 mb-5 lg:mb-16">
+                Get any
+                solution of
+                your pet</h2>
+            <a href="#service">
+                <button
+                    class="btn text-black font-bold bg-white border-2 border-solid border-white hover:text-white hover:bg-transparent">
+                    Get Started
+                </button>
+            </a>
+            <!-- </div> -->
+        </div>
     </div>
     <!-- =============================================main part=================================================== -->
     <main>
@@ -610,8 +632,28 @@
         </nav>
     </div>
 
-    <!-- script files -->
+    <!-- main script  -->
     <script src="main.js"></script>
+    <!-- ----------scripts for bannerslider---------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 </body>
 

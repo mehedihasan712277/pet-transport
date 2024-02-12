@@ -1,3 +1,47 @@
+/* style for banner slider--------------------------- */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-height: 100vh; */
+}
+
+.overlay {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+/* --------------------------------------------------- */
+
+
+
+
+
 .navBg {
   /* background-image: linear-gradient(to right, #10b3c9, #3b82f6); */
 
@@ -32,11 +76,7 @@
 }
 
 .home-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/cats.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
