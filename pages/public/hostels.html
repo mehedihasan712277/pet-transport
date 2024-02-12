@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport</title>
+    <link rel="stylesheet" href="../../style.css">
+    <!-- <link rel="stylesheet" href="../../output/output.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- ---------------------------------------navigation bar----------------------------------------- -->
+
+    <header
+        class="section  px-4 md:px-12 lg:px-20 relative  z-10   bg-gradient-to-r from-cyan-500 to-blue-500  select-none "
+        id="home">
+        <nav
+            class="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20">
+            <div class="w-14 h-14 rounded-full">
+
+                <a href="/">
+                    <img src="../../images/logo1.png" alt="logo" class="w-full h-full rounded-full">
+                </a>
+            </div>
+            <!-- menu on large device -->
+
+            <ul class="menuLink ml:flex  gap-4 hidden sm:flex text-white">
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold active" href="/">Home</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                        href="/#service">Service</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="/#about">About</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                        href="/#contact">Contact</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                        href="./pages/authentication/signup.html">Register</a>
+                </li>
+            </ul>
+            <!-- menu on small device -->
+            <button title="menu" class="text-white sm:hidden" onclick="showMenubar()">
+                <i class="fa-solid fa-bars"></i>
+
+
+            </button>
+            <ul class="w-0 overflow-x-hidden bg-gray-800 flex flex-col gap-4 items-center absolute top-0 right-0 min-h-screen transition-all"
+                id="sideMenuBar">
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-bold w-full ">
+                    <button class="m-4 ">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#home">Home</a>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#about">About</a>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#service">Service</a></li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#contact">Contact</a></li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="../authentication/signup.html">Register</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="mt-[100px]  container mx-auto shadow-lg rounded-lg">
+        <div class="pt-8">
+            <p class="text-center font-bold text-3xl">Hostels</p>
+            <p class="text-center font-semibold">
+                We ensure the best service for your pet
+            </p>
+            <br>
+        </div>
+
+        <!-- a search bar and select box for selecting area -->
+
+
+        <form>
+            <div class=" md:flex justify-between items-center gap-4 p-4">
+
+                <div class="mb-5 md:mb-0 flex w-full md:w-1/3 justify-between gap-2  items-center">
+
+                    <!-- select box for selecting the main area and after selecting the main area there will be another select box for selecting sub area -->
+
+                    <select name="area" id="area" class="p-2 rounded-lg border-2 border-gray-300 outline-none w-full">
+                        <option value="area">Area</option>
+                        <option value="mirpur">Mirpur</option>
+                        <option value="uttara">Uttara</option>
+                        <option value="dhanmondi">Dhanmondi</option>
+                        <option value="gulshan">Gulshan</option>
+                    </select>
+
+                    <select name="sub-area" id="sub-area"
+                        class="p-2 rounded-lg border-2 border-gray-300 outline-none w-full">
+                        <option value="sub-area">Sub Area</option>
+                        <option value="mirpur-1">Mirpur-1</option>
+                        <option value="mirpur-2">Mirpur-2</option>
+                        <option value="mirpur-3">Mirpur-3</option>
+                        <option value="mirpur-4">Mirpur-4</option>
+                    </select>
+
+                </div>
+
+                <div class="w-full md:w-1/3 flex gap-2 relative">
+                    <input type="text" placeholder="Search"
+                        class="w-full p-2 rounded-lg border-2 border-gray-300 outline-none h-10">
+
+                    <!-- search button with icon -->
+
+                    <button type="submit" class="text-gray-600 absolute p-2 right-3 rounded-lg">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+        <!-- hostel card inside a  container-->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+
+            <a href="/">
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="../../images/cats.jpg" alt="hostel" class="w-full h-60 rounded-t-lg object-cover">
+                    <div class="p-4">
+                        <p class="font-bold text-xl">Beautiful Hostel 1 </p>
+
+                        <!-- location with font awesome icons -->
+
+                        <div class="flex items-center gap-2 my-2">
+                            <p>
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                            <p class="text-gray-500"> Mirpur, Dhaka</p>
+                            </p>
+                        </div>
+
+                        <p class="text-gray-500">
+                            voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque
+                            nihil
+                            laborum id voluptate error omnis totam ea, fugit aut reprehenderit aspernatur autem. Velit
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="/">
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="../../images/cats.jpg" alt="hostel" class="w-full h-60 rounded-t-lg object-cover">
+                    <div class="p-4">
+                        <p class="font-bold text-xl">Beautiful Hostel 1 </p>
+
+                        <!-- location with font awesome icons -->
+
+                        <div class="flex items-center gap-2 my-2">
+                            <p>
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                            <p class="text-gray-500"> Mirpur, Dhaka</p>
+                            </p>
+                        </div>
+
+                        <p class="text-gray-500">
+                            voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque
+                            nihil
+                            laborum id voluptate error omnis totam ea, fugit aut reprehenderit aspernatur autem. Velit
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="/">
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="../../images/cats.jpg" alt="hostel" class="w-full h-60 rounded-t-lg object-cover">
+                    <div class="p-4">
+                        <p class="font-bold text-xl">Beautiful Hostel 1 </p>
+
+                        <!-- location with font awesome icons -->
+
+                        <div class="flex items-center gap-2 my-2">
+                            <p>
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                            <p class="text-gray-500"> Mirpur, Dhaka</p>
+                            </p>
+                        </div>
+
+                        <p class="text-gray-500">
+                            voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque
+                            nihil
+                            laborum id voluptate error omnis totam ea, fugit aut reprehenderit aspernatur autem. Velit
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
