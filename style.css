@@ -2,11 +2,10 @@
 html,
 body {
   position: relative;
-  height: 100%;
 }
 
 body {
-  background: #eee;
+  background: white;
   margin: 0;
   padding: 0;
 }
@@ -81,5 +80,3 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 
 }
-
-

@@ -5,12 +5,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My order</title>
+    <link rel="stylesheet" href="../../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-gray-200">
+    <header
+        class="section  px-4 md:px-12 lg:px-20 relative  z-10   bg-gradient-to-r from-cyan-500 to-blue-500  select-none ">
+        <nav
+            class="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20">
+            <div class="w-14 h-14 rounded-full">
 
+                <a href="/">
+                    <img src="../../images/logo1.png" alt="logo" class="w-full h-full rounded-full">
+                </a>
+            </div>
+            <!-- menu on large device -->
+
+            <ul class="menuLink ml:flex  gap-4 hidden sm:flex text-white">
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold active" href="/">Home</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                        href="/#service">Service</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="/#about">About</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold " href="#">Blog</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold "
+                        href="./pages/authentication/signup.html">Register</a>
+                </li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold"
+                        href="./pages/private/order.html" target="_blank">Order</a></li>
+                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold"
+                        href="./pages/private/cart.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul>
+            <!-- menu on small device -->
+            <button title="menu" class="text-white sm:hidden" onclick="showMenubar()">
+                <i class="fa-solid fa-bars"></i>
+
+
+            </button>
+            <ul class="w-0 overflow-x-hidden bg-gray-800 flex flex-col gap-4 items-center absolute top-0 right-0 min-h-screen transition-all"
+                id="sideMenuBar">
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-bold w-full ">
+                    <button class="m-4 ">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#home">Home</a>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#about">About</a>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="#service">Service</a></li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a href="#">Blog</a>
+                </li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="./pages/private/order.html">Order</a></li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="./pages/authentication/signup.html">Register</a></li>
+                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
+                        href="./pages/private/cart.html">Cart</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="space-y-4 mx-4 sm:mx-8 md:mx-20 lg:mx-32 pt-32 pb-20">
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+                Product Name
+            </div>
+            <div class="collapse-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
+                <p>Price: 100tk</p>
+                <p>Ordered on : 13-02-2024</p>
+                <!-- steps -->
+                <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+                Product Name
+            </div>
+            <div class="collapse-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
+                <p>Price: 100tk</p>
+                <p>Ordered on : 13-02-2024</p>
+                <!-- steps -->
+                <ul class="steps ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+                Product Name
+            </div>
+            <div class="collapse-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
+                <p>Price: 100tk</p>
+                <p>Ordered on : 13-02-2024</p>
+                <!-- steps -->
+                <ul class="steps ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+                Product Name
+            </div>
+            <div class="collapse-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
+                <p>Price: 100tk</p>
+                <p>Ordered on : 13-02-2024</p>
+                <!-- steps -->
+                <ul class="steps ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+                Product Name
+            </div>
+            <div class="collapse-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
+                <p>Price: 100tk</p>
+                <p>Ordered on : 13-02-2024</p>
+                <!-- steps -->
+                <ul class="steps ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+                Product Name
+            </div>
+            <div class="collapse-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
+                <p>Price: 100tk</p>
+                <p>Ordered on : 13-02-2024</p>
+                <!-- steps -->
+                <ul class="steps ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+                Product Name
+            </div>
+            <div class="collapse-content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
+                <p>Price: 100tk</p>
+                <p>Ordered on : 13-02-2024</p>
+                <!-- steps -->
+                <ul class="steps ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------footer--------------------- -->
+    <footer class=" bg-cyan-500">
+        <div class="container mx-auto">
+
+            <div class="footer p-10 bg-cyan-500 text-base-content">
+                <nav>
+                    <h6 class="font-bold text-lg text-gray-100">Services</h6>
+                    <a href="./pages/transport.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Transport</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Hostel</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Doctor</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Product</a>
+                </nav>
+                <nav>
+                    <h6 class="font-bold text-lg text-gray-100">Company</h6>
+                    <a href="#about" class="text-gray-900 font-semibold link link-hover">About us</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="mailto:pettransportbd@gmail.com"
+                        target="_blank">pettransportbd@gmail.com</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="tel:+8801813535091">01813535091</i></a>
+                </nav>
+                <nav>
+                    <h6 class="font-bold text-lg text-gray-100">Legal</h6>
+                    <a class="text-gray-900 font-semibold link link-hover">Terms of use</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Privacy policy</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Cookie policy</a>
+                </nav>
+            </div>
+            <div class="footer px-10 py-4 bg-cyan-500 text-base-content">
+                <aside class="items-center grid-flow-col">
+                    <img src="../../images/logo1.png" alt="logo" class="w-14 h-14 rounded-full">
+                    <p class="font-semibold text-gray-900">Pet Transport BD<br>Committed to provide best solution to
+                        your
+                        pet
+                    </p>
+                </aside>
+                <nav class="md:place-self-center md:justify-self-end">
+                    <div class="grid grid-flow-col gap-4">
+                        <a class=" text-black" href="tel:+8801813535091"><i class="fa-solid fa-phone"></i></a>
+                        <a class=" text-black" href="https://wa.me/+8801786-581124" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a class=" text-black" href="mailto:pettransportbd@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a class=" text-black" href="https://www.facebook.com/petdeliveryservicebd?mibextid=ZbWKwL"
+                            target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+    </footer>
+    <script src="../../main.js"></script>
 </body>
 
 </html>
