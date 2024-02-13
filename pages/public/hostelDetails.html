@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transport</title>
+    <title>Details</title>
     <link rel="stylesheet" href="../../style.css">
     <!-- <link rel="stylesheet" href="../../output/output.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,7 +22,7 @@
     <!-- ---------------------------------------navigation bar----------------------------------------- -->
 
     <header
-        class="section  px-4 md:px-12 lg:px-20 relative  z-10   bg-gradient-to-r from-cyan-500 to-blue-500  select-none "
+        class="section  px-4 md:px-12 lg:px-20 relative  z-[3000]   bg-gradient-to-r from-cyan-500 to-blue-500  select-none "
         id="home">
         <nav
             class="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20">
@@ -88,8 +88,23 @@
     <section class="container mt-[95px]   mx-auto ">
 
         <!-- image slider like banner -->
-        <div class="">
-            <img class="w-full h-[500px] object-cover" src="../../images/cats.jpg" alt="">
+        <div class="relative">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide h-[62vh] md:h-[450px]">
+                        <img src="https://i.ibb.co/SrDhKhg/pet1.jpg" alt="img" class="overlay">
+                    </div>
+                    <div class="swiper-slide h-[62vh] md:h-[450px]">
+                        <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img" class="overlay">
+                    </div>
+                    <div class="swiper-slide h-[62vh] md:h-[450px]">
+                        <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="img" class="overlay">
+                    </div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
         <!-- description -->
         <div class=" px-5 md:px-10 mt-10 mb-10 pb-10  shadow-lg">
@@ -180,6 +195,24 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
