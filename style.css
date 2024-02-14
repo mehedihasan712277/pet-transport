@@ -28,20 +28,18 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
 }
 
-.swiper-slide img {
+.homeBanner img {
   display: block;
   width: 100%;
-  height: 100%;
+
   /* object-fit: cover; */
 }
 
 /* --------------------------------------------------- */
 
-
 a {
   cursor: pointer;
 }
-
 
 .navBg {
   /* background-image: linear-gradient(to right, #10b3c9, #3b82f6); */
@@ -80,7 +78,6 @@ a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-
 }
 
 /* --------------style for blog site---------------- */
