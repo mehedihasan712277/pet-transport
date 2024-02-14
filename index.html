@@ -13,19 +13,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body>
+<body class="select-none">
     <!-- bg-bgs bg-cover bg-center bg-no-repeat -->
     <!-- <header
         class="section py-20 px-4 md:px-12 lg:px-20 relative  z-10   bg-gradient-to-r from-cyan-500 to-blue-500  select-none sm:min-h-screen"
         id="home"> -->
-    <header class="section px-4 md:px-12 lg:px-20 relative   select-none " id="home">
-        <!-- ---------------------------------------navigation bar----------------------------------------- -->
+    <!-- <header class="section px-4 md:px-12 lg:px-20 relative   select-none " id="home">
         <nav
             class="  flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20 z-[2000]">
             <div class="w-14 h-14 rounded-full">
                 <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
             </div>
-            <!-- menu on large device -->
+
 
             <ul class="menuLink ml:flex gap-4 hidden sm:flex text-white">
                 <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#home">Home</a>
@@ -46,7 +45,7 @@
                         href="./pages/private/cart.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
             </ul>
-            <!-- menu on small device -->
+
             <button title="menu" class="text-white sm:hidden" onclick="showMenubar()">
                 <i class="fa-solid fa-bars"></i>
 
@@ -76,27 +75,105 @@
                         href="./pages/private/cart.html">Cart</a></li>
             </ul>
         </nav>
-        <!-- ---------------------------------------banner part------------------------------------------- -->
-        <!-- <div class="flex flex-col items-center mt-32 md:mt-40">
-            <h1 class="text-center text-white text-3xl ml:text-4xl sm:text-5xl lg:text-7xl  font-bold">Welcome to
-                <br>
-                PET TRANSPORT
-                BD
-            </h1>
-            <h2 class="text-center text-white ml:text-xl sm:text-2xl lg:text-3xl mt-1 md:mt-2 lg:mt-3 mb-5 lg:mb-16">
-                Get any
-                solution of
-                your pet</h2>
-            <a href="#service">
-                <button
-                    class="btn text-black font-bold bg-white border-2 border-solid border-white hover:text-white hover:bg-transparent">
-                    Get Started
-                </button>
-            </a>
-        </div> -->
-    </header>
+    </header> -->
 
-
+    <div class="navbar bg-white">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <!-- -----------------------------------middle part-------------------------- -->
+                <ul tabindex="0"
+                    class="z-10 menu-sm dropdown-content mt-3 z-[1000] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Home</a></li>
+                    <li>
+                        <a>Service</a>
+                        <ul class="p-2">
+                            <li><a>Transport</a></li>
+                            <li><a>Hostel</a></li>
+                            <li><a>Grooming</a></li>
+                            <li><a>Doctor</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Order</a></li>
+                    <li><a>Blog</a></li>
+                </ul>
+            </div>
+            <!-- logo -->
+            <div class="w-14 h-14 rounded-full">
+                <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
+            </div>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li>
+                    <details>
+                        <summary>Service</summary>
+                        <ul class="p-2 z-[1000]">
+                            <li><a>Transport</a></li>
+                            <li><a>Hostel</a></li>
+                            <li><a>Grooming</a></li>
+                            <li><a>Doctor</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a>Order</a></li>
+                <li><a>Blog</a></li>
+            </ul>
+        </div>
+        <!-- --------------------------------------------right side part------------------------------------------- -->
+        <div class="navbar-end">
+            <div class="flex items-center">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <div class="indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="badge badge-sm indicator-item">8</span>
+                        </div>
+                    </div>
+                    <!-- <div tabindex="0" class="mt-3 z-[1000] card card-compact dropdown-content w-52 bg-base-100 shadow">
+                        <div class="card-body">
+                            <span class="font-bold text-lg">8 Items</span>
+                            <span class="text-info">Subtotal: $999</span>
+                            <div class="card-actions">
+                                <button class="btn btn-primary btn-block">View cart</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                src="https://i.ibb.co/p3M56hC/ferrari-488-GTB.jpg" />
+                        </div>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1000] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <!-- <span class="badge">New</span> -->
+                            </a>
+                        </li>
+                        <li><a>Log in</a></li>
+                        <li><a>Sign up</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- ---------------------------------------image slider banner part------------------------------------------- -->
     <div class="relative">
         <div class="swiper mySwiper">
@@ -112,36 +189,8 @@
                 </div>
             </div>
             <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
+                <div class="swiper-button-prev"></div> -->
             <div class="swiper-pagination"></div>
-        </div>
-
-
-        <!-- h-[calc(100vh-200px)] -->
-        <div
-            class="absolute z-[1000] w-full top-0 flex flex-col items-center justify-center items-center pt-[56px] home-banner h-[62vh] md:h-screen">
-
-            <!-- <div>
-                <img src="./images/cats.png" alt="logo" class="w-full ">
-            </div> -->
-
-            <!-- <div> -->
-            <h1 class="text-center text-white text-3xl ml:text-4xl sm:text-5xl lg:text-7xl  font-bold">Welcome to
-                <br>
-                PET TRANSPORT
-                BD
-            </h1>
-            <h2 class="text-center text-white ml:text-xl sm:text-2xl lg:text-3xl mt-1 md:mt-2 lg:mt-3 mb-5 lg:mb-16">
-                Get any
-                solution of
-                your pet</h2>
-            <a href="#service">
-                <button
-                    class="btn text-black font-bold bg-white border-2 border-solid border-white hover:text-white hover:bg-transparent">
-                    Get Started
-                </button>
-            </a>
-            <!-- </div> -->
         </div>
     </div>
     <!-- =============================================main part=================================================== -->
