@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <!-- banner -->
+    <header>
+        <div class="bgBlog flex items-center pl-6 h-64 md:h-80">
+            <div>
+                <p class="text-gray-800 text-3xl md:text-7xl font-bold">Products</p>
+                <p class="text-gray-800 md:text-2xl">Get any solution of your pet</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- product search and filter  -->
+
+    <!-- a search bar and select box for selecting area -->
+
+    <form>
+        <div class="container bg-white px-5 mx-auto md:flex justify-between items-center gap-4 p-4">
+
+            <div class="mb-5 md:mb-0 flex w-full md:w-1/3 justify-between gap-2  items-center">
+
+                <!-- select box for selecting the main area and after selecting the main area there will be another select box for selecting sub area -->
+
+                <select name="area" id="area"
+                    class="p-2 bg-inherit rounded-lg border-2 border-gray-300 outline-none w-full">
+                    <option value="food">Food</option>
+                    <option value="mirpur">A</option>
+                    <option value="uttara">B</option>
+                    <option value="dhanmondi">C</option>
+                    <option value="gulshan">D</option>
+                </select>
+
+                <button class="p-2 border-2 px-4 rounded-lg">
+                    Filter
+                </button>
+
+
+
+            </div>
+
+            <div class="w-full md:w-1/3 flex gap-2 relative">
+                <input type="text" placeholder="Search"
+                    class="w-full bg-inherit p-2 rounded-lg border-2 border-gray-300 outline-none h-10">
+
+                <!-- search button with icon -->
+
+                <button type="submit" class="text-gray-600 absolute p-2 right-3 rounded-lg">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+    <!-- <main class="px-4 sm:px-8 md:px-20 lg:px-32 lg:px-44 py-12 space-y-20"> -->
+    <main
+        class="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 container mx-auto my-6 gap-4 px-5">
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="card bg-white card-compact w-full   bg-base-100 shadow-xl  rounded-lg ">
+            <figure><img class=" h-48 w-full object-contain"
+                    src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
+                    alt="Shoes" /></figure>
+            <div class="card-body gap-0">
+                <h2 class="font-bold text-gray-900 text-start">Bilai er sundor khabar -- darun taste
+                </h2>
+
+
+                <h2 class="font-bold text-start mt-5 text-black">
+                    TK 120
+                </h2>
+
+                <p class="text-start text-xs mb-5 strike line-through">
+                    was TK 141
+                </p>
+
+                <div class="card-actions justify-between mt-2">
+                    <button
+                        class="bbtn hover:text-gray-900 border border-gray-600 px-3 py-2 rounded-full bg-gray-700 hover:bg-inherit text-white duration-200 flex gap-2 font-semibold items-center w-full flex justify-center">
+                        <span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+
+                        <span>
+                            Add
+                            to
+                            cart
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+
+    <footer class=" border-t ">
+        <div class="container mx-auto">
+
+            <div class="footer  p-10 pt-5  text-base-content">
+                <div>
+                    <h6 class="font-bold text-lg ">Services</h6>
+                    <a href="./pages/transport.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Transport</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Hostel</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Doctor</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Product</a>
+                </div>
+                <div>
+                    <h6 class="font-bold text-lg ">Company</h6>
+                    <a href="#about" class="text-gray-900 font-semibold link link-hover">About us</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="mailto:pettransportbd@gmail.com"
+                        target="_blank">pettransportbd@gmail.com</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="tel:+8801813535091">01813535091</i></a>
+                </div>
+                <div>
+                    <h6 class="font-bold text-lg ">Legal</h6>
+                    <a class="text-gray-900 font-semibold link link-hover">Terms of use</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Privacy policy</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Cookie policy</a>
+                </div>
+            </div>
+            <div class="footer px-10 py-4  text-base-content">
+                <aside class="items-center grid-flow-col">
+                    <img src="../../images/logo1.png" alt="logo" class="w-14 h-14 rounded-full">
+                    <p class="font-semibold text-gray-900">Pet Transport BD<br>Committed to provide best solution to
+                        your
+                        pet
+                    </p>
+                </aside>
+                <div class="place-self-center md:place-self-center md:justify-self-end">
+                    <div class="grid grid-flow-col gap-4 ">
+                        <a class=" text-black" href="tel:+8801813535091"><i class="fa-solid fa-phone"></i></a>
+                        <a class=" text-black" href="https://wa.me/+8801786-581124" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a class=" text-black" href="mailto:pettransportbd@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a class=" text-black" href="https://www.facebook.com/petdeliveryservicebd?mibextid=ZbWKwL"
+                            target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- bottom menu -->
+    <div style="box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2)"
+        class="bottom-0 bg-white fixed sm:hidden z-20 w-full bg-base-100 shadow-lg shdaow-top ">
+        <div class="flex justify-between px-5 py-1">
+
+            <a href="#top" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-house"></i>
+                <p class="text-sm">Home</p>
+            </a>
+            <a href="#service" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <p class="text-sm">Service</p>
+            </a>
+            <a href="#product" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-cat"></i>
+                <p class="text-sm">Product</p>
+            </a>
+            <a href="#blog" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-blog"></i>
+                <p class="text-sm">Blog</p>
+            </a>
+            <a href="#blog" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-user"></i>
+                <p class="text-sm">Profile</p>
+            </a>
+
+
+        </div>
+
+
+        <!-- <div class="flex items-center">
+            <a href="#service" class="">Service</a>
+            <a href="#product" class="">Product</a>
+            <a href="#about" class="">About</a>
+            <a href="#contact" class="">Contact</a>
+        </div> -->
+    </div>
+
+    <script src="../../main.js"></script>
+</body>
+
+</html>
