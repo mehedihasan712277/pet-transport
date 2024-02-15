@@ -78,141 +78,3324 @@
         </nav>
 
     </header>
+
+
+
     <div class="space-y-4 mx-4 sm:mx-8 md:mx-20 lg:mx-32 pt-32 pb-20">
         <div class="collapse collapse-arrow bg-white">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">
-                Product Name
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
             </div>
             <div class="collapse-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
-                <p>Price: 100tk</p>
-                <p>Ordered on : 13-02-2024</p>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- steps -->
-                <div class="flex justify-center">
+                <!-- <div class="flex justify-center">
                     <ul class="steps bg-white px-6">
                         <li class="step step-primary">Register</li>
                         <li class="step step-primary">Choose plan</li>
                         <li class="step">Purchase</li>
                         <li class="step">Receive Product</li>
                     </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
                 </div>
+
+
             </div>
         </div>
         <!-- ---------- -->
         <div class="collapse collapse-arrow bg-white">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">
-                Product Name
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
             </div>
             <div class="collapse-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
-                <p>Price: 100tk</p>
-                <p>Ordered on : 13-02-2024</p>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- steps -->
-                <ul class="steps ">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Choose plan</li>
-                    <li class="step">Purchase</li>
-                    <li class="step">Receive Product</li>
-                </ul>
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
             </div>
         </div>
         <!-- ---------- -->
         <div class="collapse collapse-arrow bg-white">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">
-                Product Name
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
             </div>
             <div class="collapse-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
-                <p>Price: 100tk</p>
-                <p>Ordered on : 13-02-2024</p>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- steps -->
-                <ul class="steps ">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Choose plan</li>
-                    <li class="step">Purchase</li>
-                    <li class="step">Receive Product</li>
-                </ul>
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
             </div>
         </div>
         <!-- ---------- -->
         <div class="collapse collapse-arrow bg-white">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">
-                Product Name
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
             </div>
             <div class="collapse-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
-                <p>Price: 100tk</p>
-                <p>Ordered on : 13-02-2024</p>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- steps -->
-                <ul class="steps ">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Choose plan</li>
-                    <li class="step">Purchase</li>
-                    <li class="step">Receive Product</li>
-                </ul>
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
             </div>
         </div>
         <!-- ---------- -->
         <div class="collapse collapse-arrow bg-white">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">
-                Product Name
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
             </div>
             <div class="collapse-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
-                <p>Price: 100tk</p>
-                <p>Ordered on : 13-02-2024</p>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- steps -->
-                <ul class="steps ">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Choose plan</li>
-                    <li class="step">Purchase</li>
-                    <li class="step">Receive Product</li>
-                </ul>
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
             </div>
         </div>
         <!-- ---------- -->
         <div class="collapse collapse-arrow bg-white">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">
-                Product Name
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
             </div>
             <div class="collapse-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
-                <p>Price: 100tk</p>
-                <p>Ordered on : 13-02-2024</p>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- steps -->
-                <ul class="steps ">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Choose plan</li>
-                    <li class="step">Purchase</li>
-                    <li class="step">Receive Product</li>
-                </ul>
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
             </div>
         </div>
         <!-- ---------- -->
         <div class="collapse collapse-arrow bg-white">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">
-                Product Name
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
             </div>
             <div class="collapse-content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.</p>
-                <p>Price: 100tk</p>
-                <p>Ordered on : 13-02-2024</p>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- steps -->
-                <ul class="steps ">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Choose plan</li>
-                    <li class="step">Purchase</li>
-                    <li class="step">Receive Product</li>
-                </ul>
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
             </div>
         </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+        <div class="collapse collapse-arrow bg-white">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-base flex justify-between font-medium">
+                <p>Product Name</p>
+
+                <!-- <p>
+                    Status: <span class="badge badge-success text-white">Delivered</span>
+                </p> -->
+            </div>
+            <div class="collapse-content">
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>
+                            <span class="font-bold">
+                                Description:
+                            </span>
+
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, molestiae.
+                        </p>
+                        <p>
+                            <span class="font-bold">
+                                Price:
+                            </span>
+
+                            100tk
+                        </p>
+                        <p>
+
+                            <span class="font-bold">
+                                Ordered on :
+                            </span>
+                            13-02-2024
+                        </p>
+                        <p><span class="font-bold">
+                                Shipping Address:
+                            </span>: Dhaka </p>
+                    </div>
+
+                    <div class="flex justify-end ">
+                        <div>
+                            <p>
+                                Status: <span class="badge badge-success text-white">Delivered</span>
+                            </p>
+
+                            <button class="border mt-3 px-3 py-1 rounded-lg text-sm hover:bg-gray-200 duration-200">
+                                Download Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- steps -->
+                <!-- <div class="flex justify-center">
+                    <ul class="steps bg-white px-6">
+                        <li class="step step-primary">Register</li>
+                        <li class="step step-primary">Choose plan</li>
+                        <li class="step">Purchase</li>
+                        <li class="step">Receive Product</li>
+                    </ul>
+                </div> -->
+
+
+                <!-- large screen timeline -->
+                <ol class="items-center w-full   flex justify-center hidden sm:flex pt-5">
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Pending</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-check text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Order Confirmed</h3>
+
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </div>
+                            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div>
+                        </div>
+                        <div class="mt-3 sm:pe-8">
+                            <h3 class="text-lg font-semibold text-gray-900 ">On the way</h3>
+
+                        </div>
+                    </li>
+
+                    <li class="relative mb-6 sm:mb-0">
+                        <div class="flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-blue-600  sm:ring-8 shrink-0">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </div>
+                            <!-- <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700">
+
+                            </div> -->
+                        </div>
+                        <div class="mt-3 sm:pe-8 ">
+                            <h3 class="text-lg font-semibold text-gray-900 ">Delivered</h3>
+
+                        </div>
+                    </li>
+                </ol>
+
+
+                <!-- small screen timeline -->
+
+                <div class="ps-5 pt-5">
+                    <ol class="relative sm:hidden border-s border-gray-200 dark:border-gray-700">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-spinner text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Pending
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+
+                                <i class="fa-solid fa-check text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Order Confirmed
+                            </h3>
+
+
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-truck text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                On the way
+                            </h3>
+
+
+                        </li>
+
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-blue-300  ">
+                                <i class="fa-solid fa-house text-black"></i>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
+                                Delivered
+                            </h3>
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ---------- -->
+
+
     </div>
     <!-- ---------------footer--------------------- -->
     <footer class=" bg-cyan-500">
