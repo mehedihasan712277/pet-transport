@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../output/output.css">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+    <!-- Leaflet Routing Machine CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+
+    <!-- Leaflet Control Geocoder CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+
+
+</head>
+
+<body id="top" class="select-none">
+
+
+
+    <div id="map"></div>
+
+    <!-- footer -->
+
+    <footer class=" border-t ">
+        <div class="container mx-auto">
+
+            <div class="footer  p-10 pt-5  text-base-content">
+                <div>
+                    <h6 class="font-bold text-lg ">Services</h6>
+                    <a href="./pages/transport.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Transport</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Hostel</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Doctor</a>
+                    <a href="./pages/upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Product</a>
+                </div>
+                <div>
+                    <h6 class="font-bold text-lg ">Company</h6>
+                    <a href="#about" class="text-gray-900 font-semibold link link-hover">About us</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="mailto:pettransportbd@gmail.com"
+                        target="_blank">pettransportbd@gmail.com</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="tel:+8801813535091">01813535091</i></a>
+                </div>
+                <div>
+                    <h6 class="font-bold text-lg ">Legal</h6>
+                    <a class="text-gray-900 font-semibold link link-hover">Terms of use</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Privacy policy</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Cookie policy</a>
+                </div>
+            </div>
+            <div class="footer px-10 py-4  text-base-content">
+                <aside class="items-center grid-flow-col">
+                    <img src="./images/logo1.png" alt="logo" class="w-14 h-14 rounded-full">
+                    <p class="font-semibold text-gray-900">Pet Transport BD<br>Committed to provide best solution to
+                        your
+                        pet
+                    </p>
+                </aside>
+                <div class="place-self-center md:place-self-center md:justify-self-end">
+                    <div class="grid grid-flow-col gap-4 ">
+                        <a class=" text-black" href="tel:+8801813535091"><i class="fa-solid fa-phone"></i></a>
+                        <a class=" text-black" href="https://wa.me/+8801786-581124" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a class=" text-black" href="mailto:pettransportbd@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a class=" text-black" href="https://www.facebook.com/petdeliveryservicebd?mibextid=ZbWKwL"
+                            target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- bottom menu -->
+    <div style="box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2)"
+        class="bottom-0 fixed sm:hidden z-20 w-full bg-base-100 shadow-lg shdaow-top ">
+        <div class="flex justify-between px-5 py-1">
+
+            <a href="#top" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-house"></i>
+                <p class="text-sm">Home</p>
+            </a>
+            <a href="#service" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <p class="text-sm">Service</p>
+            </a>
+            <a href="#product" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-cat"></i>
+                <p class="text-sm">Product</p>
+            </a>
+            <a href="#blog" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-blog"></i>
+                <p class="text-sm">Blog</p>
+            </a>
+            <a href="#blog" class="flex py-2 flex-col items-center ">
+                <i class="fa-solid fa-user"></i>
+                <p class="text-sm">Profile</p>
+            </a>
+
+
+        </div>
+
+
+        <!-- <div class="flex items-center">
+            <a href="#service" class="">Service</a>
+            <a href="#product" class="">Product</a>
+            <a href="#about" class="">About</a>
+            <a href="#contact" class="">Contact</a>
+        </div> -->
+    </div>
+
+
+
+    <!-- main script  -->
+    <!-- <script src="../../main.js"></script> -->
+
+    <!-- ----------scripts for leaflet---------------- -->
+    <!-- Leaflet and Leaflet Routing Machine JavaScript -->
+    <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <!-- Leaflet Control Geocoder JavaScript -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13); // Set the initial center and zoom level
+
+        // Add a tile layer to display the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        let marker1;
+        let marker2;
+
+        // Event listener for map click
+        map.on('click', function (e) {
+
+            // if (marker1) {
+            //     map.removeLayer(marker1);
+            // }
+
+            if (!marker1 && !marker2) {
+                marker1 = L.marker(e.latlng).addTo(map);
+            } else if (marker1 && !marker2) {
+                marker2 = L.marker(e.latlng).addTo(map);
+            } else if (marker1 && marker2) {
+                map.removeLayer(marker1);
+                // map.removeLayer(marker2);
+                marker1 = null;
+                // marker2 = null;
+
+                // swap the marker
+                let temp = marker1;
+                marker1 = marker2;
+                marker2 = temp;
+
+
+
+                marker2 = L.marker(e.latlng).addTo(map);
+            }
+
+
+            // console.log('marker1', marker1);
+            // console.log('marker2', marker2);
+
+            let latlngs = [marker1?.getLatLng(), marker2?.getLatLng()];
+
+
+
+
+
+            // let currentRoute;
+            // // mark the street route
+            // currentRoute = L.Routing.control({
+            //     waypoints: latlngs,
+            //     routeWhileDragging: true
+            // }).addTo(map);
+
+
+
+
+
+
+
+
+
+            // if (route) {
+            //     map?.removeControl(route);
+            // }
+
+
+
+
+
+            // Place a marker at the clicked location
+            // marker1 = L.marker(e.latlng).addTo(map);
+
+            // place the marker
+            // marker1 = L.marker(e.latlng).addTo(map);
+
+        });
+
+
+    </script>
+
+
+
+
+    <!-- Your JavaScript code -->
+    <!-- <script>
+        var map = L.map('map').setView([51.505, -0.09], 13); // Set the initial center and zoom level
+
+        // Add a tile layer to display the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add routing control
+        // L.Routing.control({
+        //     waypoints: [
+        //         L.latLng(51.505, -0.09), // Starting point
+        //         L.latLng(51.51, -0.1)    // Destination point
+        //     ],
+        //     routeWhileDragging: true
+        // }).addTo(map);
+
+
+
+       
+
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

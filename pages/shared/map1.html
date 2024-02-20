@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap Routing - Bangladesh</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>OpenStreetMap Routing Example - Bangladesh</h2>
+
+    <form id="routingForm">
+        <label for="source">Source:</label>
+        <input type="text" id="source" placeholder="Enter source location" required>
+        <div id="sourceResult"></div>
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" placeholder="Enter destination location" required>
+        <div id="destinationResult"></div>
+
+        <button type="button" onclick="useCurrentLocation()">Use My Current Location</button>
+        <button type="button" onclick="calculateRoute()">Calculate Route</button>
+        <button type="button" onclick="reloadMap()">Reload Map</button>
+    </form>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <script>
+        var map = L.map('map').setView([23.6850, 90.3563], 7); // Set center coordinates for Bangladesh
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        var control = L.Routing.control({
+            waypoints: [],
+            routeWhileDragging: true
+        }).addTo(map);
+
+        // Variable to keep track of clicked points
+        var clickedPoints = [];
+
+        // Use current location button
+        function useCurrentLocation() {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var latlng = L.latLng(position.coords.latitude, position.coords.longitude);
+                clickedPoints.push(latlng);
+                control.setWaypoints(clickedPoints);
+                zoomToLocation(latlng);
+            }, function (error) {
+                alert('Error getting current location: ' + error.message);
+            });
+        }
+
+        // Event listener for mouse clicks on the map
+        map.on('click', function (e) {
+            var latlng = e.latlng;
+            clickedPoints.push(latlng);
+
+            if (clickedPoints.length <= 2) {
+                control.setWaypoints(clickedPoints);
+                zoomToLocation(latlng);
+            } else {
+                alert('You can only select two points - start and destination.');
+                clickedPoints.pop(); // Remove the last clicked point
+            }
+        });
+
+        function calculateRoute() {
+            // Check if two points (start and destination) are selected
+            if (clickedPoints.length === 2) {
+                control.setWaypoints(clickedPoints);
+                zoomToLocation(clickedPoints[1]); // Zoom to destination after calculating route
+            } else {
+                alert('Please click on the map to select both start and destination points.');
+            }
+        }
+
+        function reloadMap() {
+            // Reset the map by clearing the selected points
+            clickedPoints = [];
+            control.setWaypoints([]);
+            document.getElementById('source').value = '';
+            document.getElementById('destination').value = '';
+            document.getElementById('sourceResult').innerHTML = '';
+            document.getElementById('destinationResult').innerHTML = '';
+            map.setView([23.6850, 90.3563], 7); // Reset map to initial view
+        }
+
+        // Add geocoding search boxes
+        var geocoderOptions = {
+            collapsed: false, // Whether the control should be collapsed or not
+            position: 'topright', // The position of the control (one of the map corners)
+            placeholder: 'Search for a location...',
+            errorMessage: 'Not found',
+            geocoder: L.Control.Geocoder.nominatim(),
+            defaultMarkGeocode: false
+        };
+
+        var geocoderSource = L.Control.geocoder(geocoderOptions).addTo(map).on('markgeocode', function (e) {
+            var result = e.geocode || e.relatedTarget.geocode;
+            document.getElementById('sourceResult').innerHTML = 'Source coordinates: ' + result.center.toString();
+            document.getElementById('source').value = result.name;
+            clickedPoints[0] = L.latLng(result.center.lat, result.center.lng);
+            zoomToLocation(clickedPoints[0]);
+        });
+
+        var geocoderDestination = L.Control.geocoder(geocoderOptions).addTo(map).on('markgeocode', function (e) {
+            var result = e.geocode || e.relatedTarget.geocode;
+            document.getElementById('destinationResult').innerHTML = 'Destination coordinates: ' + result.center.toString();
+            document.getElementById('destination').value = result.name;
+            clickedPoints[1] = L.latLng(result.center.lat, result.center.lng);
+            zoomToLocation(clickedPoints[1]);
+        });
+
+        function zoomToLocation(latlng) {
+            map.setView(latlng, 12); // Zoom to the selected location with a zoom level of 12
+        }
+    </script>
+
+</body>
+
+</html>
