@@ -14,103 +14,83 @@
 </head>
 
 <body id="top" class="select-none">
-    <!-- bg-bgs bg-cover bg-center bg-no-repeat -->
-    <!-- <header
-        class="section py-20 px-4 md:px-12 lg:px-20 relative  z-10   bg-gradient-to-r from-cyan-500 to-blue-500  select-none sm:min-h-screen"
-        id="home"> -->
-    <!-- <header class="section px-4 md:px-12 lg:px-20 relative   select-none " id="home">
-        <nav
-            class="  flex items-center justify-between py-5 fixed top-0 left-0 right-0 w-full px-4 md:px-12 lg:px-20 z-[2000]">
-            <div class="w-14 h-14 rounded-full">
-                <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
-            </div>
 
-
-            <ul class="menuLink ml:flex gap-4 hidden sm:flex text-white">
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#home">Home</a>
-                </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#service">Service</a>
-                </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold" href="#about">About</a>
-                </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold"
-                        href="./pages/public/Blog.html">Blog</a>
-                </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold"
-                        href="./pages/authentication/signup.html">Register</a>
-                </li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold"
-                        href="./pages/private/order.html" target="_blank">Order</a></li>
-                <li><a class="lg:text-xl transition duration-300 ease-in-out font-semibold"
-                        href="./pages/private/cart.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-            </ul>
-
-            <button title="menu" class="text-white sm:hidden" onclick="showMenubar()">
-                <i class="fa-solid fa-bars"></i>
-
-
-            </button>
-            <ul class="w-0 overflow-x-hidden bg-gray-800 flex flex-col gap-4 items-center absolute top-0 right-0 min-h-screen transition-all"
-                id="sideMenuBar">
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-bold w-full ">
-                    <button class="m-4 ">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </li>
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
-                        href="#home">Home</a></li>
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
-                        href="#about">About</a></li>
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
-                        href="#service">Service</a></li>
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
-                        href="./pages/public/Blog.html">Blog</a>
-                </li>
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
-                        href="./pages/private/order.html">Order</a></li>
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
-                        href="./pages/authentication/signup.html">Register</a></li>
-                <li onclick="hideMenuBar()" class="text-gray-400 hover:text-gray-100 font-semibold"><a
-                        href="./pages/private/cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header> -->
 
     <div class="  fixed top-0 left-0 right-0 z-10 shadow-lg bg-white">
         <div class="navbar container mx-auto">
             <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
+
+
+                <!-- mobile nav drawer -->
+
+                <div class="drawer flex sm:hidden z-50">
+                    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content flex items-center">
+                        <!-- Page content here -->
+                        <!-- <label for="my-drawer" class="">Open drawer</label> -->
+
+                        <label for="my-drawer" class="btn btn-ghost lg:hidden cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+
+
+
+                        <!-- logo -->
+                        <div class="w-14 h-14 rounded-full block sm:hidden">
+                            <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
+                        </div>
+
+
                     </div>
-                    <!-- -----------------------------------middle part-------------------------- -->
-                    <ul tabindex="0"
-                        class="z-10 menu-sm dropdown-content mt-3 z-[1000] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="/index.html">Home</a></li>
-                        <li>
-                            <a>Service</a>
-                            <ul class="p-2">
-                                <li><a href="./pages/public/transport.html">Transport</a></li>
-                                <li><a href="./pages/public/hostels.html">Hostel</a></li>
-                                <li><a href="./pages/public/upcoming.html">Grooming</a></li>
-                                <li><a href="./pages/public/upcoming.html">Doctor</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./pages/private/order.html">Order</a></li>
-                        <li><a href="./pages/public/Blog.html">Blog </a></li>
-                        <li><a href="./pages/public/products.html">Products</a></li>
-                    </ul>
+                    <div class="drawer-side">
+                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <ul class="menu p-4 w-full min-h-full bg-base-200 text-base-content z-1000">
+                            <div class="flex w-full justify-end">
+
+
+                                <!-- close drawer button -->
+                                <label for="my-drawer" aria-label="close sidebar"
+                                    class="h-5 w-5 bg-white rounded-full  p-5 flex justify-center items-center text-xl cursor-pointer">
+
+                                    <i class="fa-solid fa-xmark"></i>
+
+
+                                </label>
+
+                            </div>
+
+                            <!-- Sidebar content here -->
+                            <li><a href="/index.html">Home</a></li>
+                            <li>
+                                <a>Service</a>
+                                <ul class="p-2">
+                                    <li><a href="./pages/public/transport.html">Transport</a></li>
+                                    <li><a href="./pages/public/hostels.html">Hostel</a></li>
+                                    <li><a href="./pages/public/upcoming.html">Grooming</a></li>
+                                    <li><a href="./pages/public/upcoming.html">Doctor</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./pages/private/order.html">Order</a></li>
+                            <li><a href="./pages/public/Blog.html">Blog </a></li>
+                            <li><a href="./pages/public/products.html">Products</a></li>
+
+                        </ul>
+                    </div>
                 </div>
+
+
                 <!-- logo -->
-                <div class="w-14 h-14 rounded-full">
+                <div class="w-14 h-14 rounded-full hidden sm:block">
                     <img src="./images/logo1.png" alt="logo" class="w-full h-full rounded-full">
                 </div>
             </div>
+
+
+            <!-- top navbar links for large screen -->
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
                     <li><a href="/index.html">Home</a></li>
@@ -133,7 +113,7 @@
             <!-- --------------------------------------------right side part------------------------------------------- -->
             <div class="navbar-end">
                 <div class="flex items-center">
-                    <div class="dropdown dropdown-end">
+                    <div class="">
                         <a href="./pages/private/cart.html" tabindex="0" role="button" class="btn btn-ghost btn-circle">
                             <div class="indicator">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -144,17 +124,11 @@
                                 <span class="badge badge-sm indicator-item">8</span>
                             </div>
                         </a>
-                        <!-- <div tabindex="0" class="mt-3 z-[1000] card card-compact dropdown-content w-52 bg-base-100 shadow">
-                                <div class="card-body">
-                                    <span class="font-bold text-lg">8 Items</span>
-                                    <span class="text-info">Subtotal: $999</span>
-                                    <div class="card-actions">
-                                        <button class="btn btn-primary btn-block">View cart</button>
-                                    </div>
-                                </div>
-                            </div> -->
+
                     </div>
-                    <div class="dropdown dropdown-end">
+
+                    <!-- top navbar avatar -->
+                    <div class="hidden sm:block dropdown dropdown-end">
                         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                             <div class="w-10 rounded-full">
                                 <img alt="Tailwind CSS Navbar component"
@@ -681,57 +655,7 @@
 
 
 
-            <!-- products inside container -- shows all product  -->
 
-            <!-- <div
-                class="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 container mx-auto my-6 gap-4">
-           
-
-                <div class="card card-compact w-[300px] mx-auto ml:w-96 md:w-72 bg-base-100 shadow-xl  rounded-lg ">
-                    <figure><img class="bg-gray-100 h-56 w-full"
-                            src="https://i.ibb.co/5BH1PC4/dog-food-cat-food-puppy-science-diet-dog-food-removebg-preview.png"
-                            alt="Shoes" /></figure>
-                    <div class="card-body gap-0">
-                        <h2 class="card-title">Shoes!</h2>
-
-                        <div class="">
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div class="flex justify-between mt-3 mb-2">
-                                <p class="font-bold">Price: 120 tk</p>
-                                <p class="font-bold text-end">
-                                    Stock: Yes</p>
-                            </div>
-                        </div>
-                        <div class="card-actions justify-between mt-2">
-                            <button
-                                class="bbtn text-gray-900 border border-gray-600 px-3 py-2 rounded hover:bg-gray-700 hover:text-white duration-200 flex gap-2 font-semibold items-center">
-                                <span>
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </span>
-
-                                <span>
-                                    Add
-                                    to
-                                    cart
-                                </span>
-                            </button>
-                            <button
-                                class="bbtn text-gray-900 border border-gray-600 px-3 py-2 rounded hover:bg-gray-700 hover:text-white duration-200 flex gap-2 font-semibold items-center">
-                                <span>
-                                    <i class="fa-solid fa-shop"></i>
-                                </span>
-
-                                <span>
-                                    Buy
-                                    Now
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div> -->
         </div>
         <!-- -----------------------------------------about page-------------------------------------- -->
         <div id="about"
@@ -786,33 +710,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="contact" class="section h-screen flex items-center justify-center text-6xl">
 
-
-        </div> -->
-
-        <!-- contact part -->
-        <!-- -------------------------------contact from------------------------------- -->
-
-        <!-- <div id="contact" class="section py-10  md:py-20 px-4 md:px-14 lg:px-32">
-            <p class="text-center font-bold text-2xl md:text-5xl text-[#06b6d4]">Contact Us</p>
-            <p class="font-semibold text-center max-w-2xl mt-3 mb-6 md:mt-6 md:mb-12 text-gray-600 mx-auto px-4">We are
-                always there to
-                provide any
-                solution to
-                your
-                pet. Feel free to
-                contact us for any
-                query</p>
-            <form action="" class="flex flex-col gap-4 max-w-2xl mx-auto">
-                <input type="text" placeholder="Name" class=" border px-3 py-2 rounded outline-none">
-                <input type="email" placeholder="Email" class=" border px-3 py-2 rounded outline-none">
-                <input type="text" placeholder="Subject" class=" border px-3 py-2 rounded outline-none">
-                <textarea name="" id="" cols="30" rows="6" placeholder="Message"
-                    class=" border px-3 py-2 rounded outline-none"></textarea>
-                <button class="btn bg-[#06b6d4] text-white hover:text-black">Send</button>
-            </form>
-        </div> -->
     </main>
 
     <!-- footer -->
@@ -955,7 +853,7 @@
             breakpoints: {
 
                 1: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                 },
                 640: {
                     slidesPerView: 2, // Small screens
