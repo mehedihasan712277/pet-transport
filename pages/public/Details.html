@@ -5,12 +5,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
+    <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <div class='select-none px-5 sm:px-12 md:px-20 lg:px-32 flex flex-col lg:flex-row gap-4 py-6 md:py-12 lg:py-20'>
+    <!-- -------------------------------nav bar------------------------------- -->
+    <div class="  fixed top-0 left-0 right-0 z-10 shadow-lg bg-white">
+        <div class="navbar container mx-auto">
+            <div class="navbar-start">
+
+
+                <!-- mobile nav drawer -->
+
+                <div class="drawer flex sm:hidden z-50">
+                    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content flex items-center">
+                        <!-- Page content here -->
+                        <!-- <label for="my-drawer" class="">Open drawer</label> -->
+
+                        <label for="my-drawer" class="btn btn-ghost lg:hidden cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+
+
+
+                        <!-- logo -->
+                        <div class="w-14 h-14 rounded-full block sm:hidden">
+                            <img src="../../images/logo1.png" alt="logo" class="w-full h-full rounded-full">
+                        </div>
+
+
+                    </div>
+                    <div class="drawer-side">
+                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <ul class="menu p-4 w-full min-h-full bg-base-200 text-base-content z-1000">
+                            <div class="flex w-full justify-end">
+
+
+                                <!-- close drawer button -->
+                                <label for="my-drawer" aria-label="close sidebar"
+                                    class="h-5 w-5 bg-white rounded-full  p-5 flex justify-center items-center text-xl cursor-pointer">
+
+                                    <i class="fa-solid fa-xmark"></i>
+
+
+                                </label>
+
+                            </div>
+
+                            <!-- Sidebar content here -->
+                            <li><a href="/index.html">Home</a></li>
+                            <li>
+                                <a>Service</a>
+                                <ul class="p-2">
+                                    <li><a href="./pages/public/transport.html">Transport</a></li>
+                                    <li><a href="./pages/public/hostels.html">Hostel</a></li>
+                                    <li><a href="./pages/public/upcoming.html">Grooming</a></li>
+                                    <li><a href="./pages/public/upcoming.html">Doctor</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./pages/private/order.html">Order</a></li>
+                            <li><a href="./pages/public/Blog.html">Blog </a></li>
+                            <li><a href="./pages/public/products.html">Products</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- logo -->
+                <div class="w-14 h-14 rounded-full hidden sm:block">
+                    <img src="../../images/logo1.png" alt="logo" class="w-full h-full rounded-full">
+                </div>
+            </div>
+
+
+            <!-- top navbar links for large screen -->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <details>
+                            <summary>Service</summary>
+                            <ul class="p-2 z-[1000]">
+                                <li><a href="./pages/public/transport.html">Transport</a></li>
+                                <li><a href="./pages/public/hostels.html">Hostel</a></li>
+                                <li><a href="./pages/public/upcoming.html">Grooming</a></li>
+                                <li><a href="./pages/public/upcoming.html">Doctor</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="./pages/private/order.html">Order</a></li>
+                    <li><a href="./pages/public/Blog.html">Blog</a></li>
+                    <li><a href="./pages/public/products.html">Products</a></li>
+                </ul>
+            </div>
+            <!-- --------------------------------------------right side part------------------------------------------- -->
+            <div class="navbar-end">
+                <div class="flex items-center">
+                    <div class="">
+                        <a href="./pages/private/cart.html" tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                            <div class="indicator">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span class="badge badge-sm indicator-item">8</span>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- top navbar avatar -->
+                    <div class="hidden sm:block dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 rounded-full">
+                                <img alt="Tailwind CSS Navbar component"
+                                    src="https://i.ibb.co/p3M56hC/ferrari-488-GTB.jpg" />
+                            </div>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1000] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li>
+                                <a class="justify-between">
+                                    Profile
+                                    <!-- <span class="badge">New</span> -->
+                                </a>
+                            </li>
+                            <li><a href="../authentication/signin.html">Log in</a></li>
+                            <li><a href="../authentication/signup.html">Sign up</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------body---------------------------------- -->
+
+    <div class='select-none px-5 sm:px-12 md:px-20 lg:px-32 flex flex-col lg:flex-row gap-4 py-6 md:py-20 lg:py-36'>
         <div class='space-y-2 lg:flex-1'>
             <!-- Main Image -->
             <div>
@@ -36,80 +176,251 @@
         <!-- Product Info -->
         <div class='text-gray-700 lg:flex-1 lg:flex lg:flex-col lg:justify-between'>
             <div>
-                <p class='text-xl font-bold'>Product Name</p>
-                <p>
-                    <span class='font-semibold'>Price(tk) :</span>
-                    <span class='mr-2'>100</span>
-                    <del>
+                <p class='text-xl md:text-3xl  font-bold'>Product Name</p>
+                <div class="flex gap-20">
+                    <p class="text-gray-500">Brand name</p>
+                    <p class="text-gray-500">Category name</p>
+                </div>
+                <!-- ----------ratings------------ -->
+                <div class="text-yellow-500 border-b-2 py-6">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="py-6">
+                    <!-- <span class='font-semibold'>Price(tk) :</span> -->
+                    <i class="fa-solid fa-bangladeshi-taka-sign text-xl md:text-2xl"></i>
+                    <span class='text-xl md:text-2xl lg:text-4xl mr-2'>100</span>
+                    <del class="text-4xl">
                         <span class='text-red-400'>120</span>
                     </del>
                 </p>
-                <div class='py-4'>
+                <p>Stock: 10pcs</p>
+                <div class="flex items-center gap-4 py-4">
+                    <p>Quantity: </p>
+                    <div class="flex">
+                        <button class="h-12 w-12 bg-green-200 flex justify-center items-center text-xl ">-</button>
+                        <div class="h-12 w-12 bg-gray-100 flex justify-center items-center ">1</div>
+                        <button class="h-12 w-12 bg-green-200 flex justify-center items-center text-xl ">+</button>
+                    </div>
+                </div>
+                <!-- <div class='py-4'>
                     <p class="font-bold">Product heading</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsam minus numquam quaerat. Rerum
                         voluptates quam nostrum ipsam doloremque voluptate.</p>
-                </div>
+                </div> -->
             </div>
             <!-- Buttons -->
-            <div class='w-full flex justify-between'>
-                <a href="/address" class='btn btn-outline rounded-sm'>
+            <div class='w-full flex gap-4 pt-4 md:pt-12'>
+                <a href="/address" class='btn btn-outline rounded-full sm:w-44 flex-1 sm:flex-initial'>
                     Buy now
                 </a>
-                <button class='btn btn-outline rounded-sm'>
+                <button class='btn btn-outline rounded-full sm:w-44 flex-1 sm:flex-initial'>
                     Add to cart
                 </button>
             </div>
         </div>
     </div>
-    <!-- ----------------------review--------------------- -->
-    <div class="px-2 md:px-12 lg:px-20 py-6 flex flex-col gap-4">
-        <!-- ------------------------review 1------------------------- -->
-        <div class="bg-gray-100 p-4 rounded-lg">
-            <!-- -----------writer description---------------- -->
-            <div class="flex items-center gap-4 mt-3">
-                <img class="w-10 h-10 rounded-full  rounded-full" src="https://i.ibb.co/p3M56hC/ferrari-488-GTB.jpg"
-                    alt="">
-                <div class="font-medium ">
-                    <div>Jese Leos</div>
-                    <div class="text-sm text-gray-500 ">Posted on August 2024</div>
-                </div>
-            </div>
-            <!-- ----------------review------------------------- -->
-            <p class="mt-4 text-sm text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-                nesciunt
-                temporibus
-                adipisci a minima
-                repellendus odio modi inventore aperiam necessitatibus magnam ipsum beatae, eveniet perferendis rem
-                repellat quae corrupti vitae neque iste quisquam! Velit, voluptatem aut ex quae assumenda quasi, maiores
-                .</p>
-            <div>
-
-            </div>
+    <!-- ----------------------about the item--------------------- -->
+    <div class="flex items-center px-4 md:px-12 lg:px-20">
+        <p class="md:w-[190px]">Details of the product</p>
+        <hr class="w-full hidden md:block">
+    </div>
+    <div id="product-details" class="px-4 md:px-12 lg:px-20">
+        <div>
+            <button id="description" class=" px-4 py-2 rounded-sm border-2 border-cyan-300">Description</button>
+            <button id="review" class=" px-4 py-2 rounded-sm border-2 border-cyan-300">Reviews</button>
+            <button id="faq" class=" px-4 py-2 rounded-sm border-2 border-cyan-300">FAQ</button>
         </div>
-        <!-- ------------------------review 2------------------------- -->
-        <div class="bg-gray-100 p-4 rounded-lg">
-            <!-- -----------writer description---------------- -->
-            <div class="flex items-center gap-4 mt-3">
-                <img class="w-10 h-10 rounded-full  rounded-full" src="https://i.ibb.co/p3M56hC/ferrari-488-GTB.jpg"
-                    alt="">
-                <div class="font-medium ">
-                    <div>Jese Leos</div>
-                    <div class="text-sm text-gray-500 ">Posted on August 2024</div>
+        <div id="content" class="py-12">
+            <!-- --------------description--------------- -->
+            <div id="description-content" class="div">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga eius dolore nostrum distinctio
+                perspiciatis quidem facere fugiat corrupti tempore!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem optio eveniet explicabo quas
+                facere. Laboriosam enim quo obcaecati fugit?
+                <br><br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos eveniet sequi ad magnam corrupti
+                tempora, voluptas quas blanditiis! Et quidem id optio adipisci corporis laboriosam laudantium expedita
+                esse odio possimus provident, consequuntur consectetur suscipit dolorem labore ex debitis. Rem suscipit
+                corrupti, accusamus at voluptate amet vitae doloremque consequuntur. Et eius a tempore asperiores
+                cumque. Sit deserunt recusandae quasi illo, itaque impedit illum consectetur debitis labore blanditiis
+                praesentium at, modi ducimus quibusdam nulla, consequatur nam qui rem odio accusamus assumenda vitae
+                asperiores nihil! Corrupti dolores numquam ex quo, ratione hic reiciendis eius cumque voluptates, sint
+                sapiente aspernatur minus, qui cum iste necessitatibus praesentium sequi saepe consectetur modi est
+                natus quam! Vel, nobis ipsa. Enim molestiae quaerat, odio repellendus tenetur aspernatur minus eveniet
+                sunt amet quidem sapiente perferendis excepturi pariatur porro? Tenetur qui laboriosam hic corrupti.
+                Aliquid in, deleniti est vel reprehenderit iure ea et sequi illo, beatae veritatis harum quia assumenda,
+                expedita eos explicabo! Enim labore excepturi incidunt sapiente assumenda laudantium repellendus
+                perspiciatis est cum quaerat aspernatur magni nihil accusantium, blanditiis odit, veniam omnis libero?
+                Labore, sit consectetur obcaecati fugiat inventore sint nemo placeat eum magnam. Sint optio explicabo
+                praesentium obcaecati ab reiciendis qui incidunt, recusandae, autem modi hic perferendis accusantium.
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptas impedit expedita commodi repellat
+                temporibus?
+            </div>
+            <div id="review-content" class="div">
+                <div class="flex flex-col gap-4">
+                    <!-- ------------------------review 1------------------------- -->
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <!-- -----------writer description---------------- -->
+                        <div class="flex items-center gap-4 mt-3">
+                            <img class="w-10 h-10 rounded-full  rounded-full"
+                                src="https://i.ibb.co/p3M56hC/ferrari-488-GTB.jpg" alt="">
+                            <div class="font-medium ">
+                                <div>Jese Leos</div>
+                                <div class="text-sm text-gray-500 ">Posted on August 2024</div>
+                            </div>
+                        </div>
+                        <!-- ----------------review------------------------- -->
+                        <p class="mt-4 text-sm text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates
+                            nesciunt
+                            temporibus
+                            adipisci a minima
+                            repellendus odio modi inventore aperiam necessitatibus magnam ipsum beatae, eveniet
+                            perferendis rem
+                            repellat quae corrupti vitae neque iste quisquam! Velit, voluptatem aut ex quae assumenda
+                            quasi, maiores
+                            .</p>
+                        <div>
+
+                        </div>
+                    </div>
+                    <!-- ------------------------review 2------------------------- -->
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <!-- -----------writer description---------------- -->
+                        <div class="flex items-center gap-4 mt-3">
+                            <img class="w-10 h-10 rounded-full  rounded-full"
+                                src="https://i.ibb.co/p3M56hC/ferrari-488-GTB.jpg" alt="">
+                            <div class="font-medium ">
+                                <div>Jese Leos</div>
+                                <div class="text-sm text-gray-500 ">Posted on August 2024</div>
+                            </div>
+                        </div>
+                        <!-- ----------------review------------------------- -->
+                        <p class="mt-4 text-sm text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptates
+                            nesciunt
+                            temporibus
+                            adipisci a minima
+                            repellendus odio modi inventore aperiam necessitatibus magnam ipsum beatae, eveniet
+                            perferendis rem
+                            repellat quae corrupti vitae neque iste quisquam! Velit, voluptatem aut ex quae assumenda
+                            quasi, maiores
+                            .</p>
+                        <div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- ----------------review------------------------- -->
-            <p class="mt-4 text-sm text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-                nesciunt
-                temporibus
-                adipisci a minima
-                repellendus odio modi inventore aperiam necessitatibus magnam ipsum beatae, eveniet perferendis rem
-                repellat quae corrupti vitae neque iste quisquam! Velit, voluptatem aut ex quae assumenda quasi, maiores
-                .</p>
-            <div>
-
+            <!-- ------------------------------faq-------------------------- -->
+            <div id="faq-content" class="div space-y-2">
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">
+                        Click to open this one and close others
+                    </div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">
+                        Click to open this one and close others
+                    </div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">
+                        Click to open this one and close others
+                    </div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- ----------------------footer---------------------- -->
+    <footer class=" border-t ">
+        <div class="container mx-auto">
+
+            <div class="footer  p-10 pt-5  text-base-content">
+                <div>
+                    <h6 class="font-bold text-lg ">Services</h6>
+                    <a href="./transport.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Transport</a>
+                    <a href="./hostels.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Hostel</a>
+                    <a href="./upcoming.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Doctor</a>
+                    <a href="./products.html" target="_blank"
+                        class="text-gray-900 font-semibold link link-hover">Product</a>
+                </div>
+                <div>
+                    <h6 class="font-bold text-lg ">Company</h6>
+                    <a href="#about" class="text-gray-900 font-semibold link link-hover">About us</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="mailto:pettransportbd@gmail.com"
+                        target="_blank">pettransportbd@gmail.com</a>
+                    <a class="text-gray-900 font-semibold link link-hover" href="tel:+8801813535091">01813535091</i></a>
+                </div>
+                <div>
+                    <h6 class="font-bold text-lg ">Legal</h6>
+                    <a class="text-gray-900 font-semibold link link-hover">Terms of use</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Privacy policy</a>
+                    <a class="text-gray-900 font-semibold link link-hover">Cookie policy</a>
+                </div>
+            </div>
+            <div class="footer px-10 py-4  text-base-content">
+                <aside class="items-center grid-flow-col">
+                    <img src="../../images/logo1.png" alt="logo" class="w-14 h-14 rounded-full">
+                    <p class="font-semibold text-gray-900">Pet Transport BD<br>Committed to provide best solution to
+                        your
+                        pet
+                    </p>
+                </aside>
+                <div class="place-self-center md:place-self-center md:justify-self-end">
+                    <div class="grid grid-flow-col gap-4 ">
+                        <a class=" text-black" href="tel:+8801813535091"><i class="fa-solid fa-phone"></i></a>
+                        <a class=" text-black" href="https://wa.me/+8801786-581124" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a class=" text-black" href="mailto:pettransportbd@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a class=" text-black" href="https://www.facebook.com/petdeliveryservicebd?mibextid=ZbWKwL"
+                            target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- -----------------------script -------------------- -->
+    <script>
+        const buttons = document.querySelectorAll('#product-details button'); // Select all buttons
+        const contentDivs = document.getElementById('content').querySelectorAll('.div'); // Select all content divs
+
+        function showContent(buttonId) {
+            contentDivs.forEach(div => div.style.display = 'none'); // Hide all content divs
+            document.getElementById(buttonId + '-content').style.display = 'block'; // Show clicked button's content
+            buttons.forEach(button => button.classList.remove('active', 'bg-cyan-300')); // Remove active class and previous bg color
+            document.getElementById(buttonId).classList.add('active', 'bg-cyan-300'); // Add active class and set bg color
+        }
+
+        buttons.forEach(button => button.addEventListener('click', () => showContent(button.id)));
+
+        // Initial state (hide reviews and FAQ)
+        document.getElementById('description').classList.add('active', 'bg-cyan-300');
+        document.getElementById('review-content').style.display = 'none';
+        document.getElementById('faq-content').style.display = 'none';
+    </script>
 </body>
 
 </html>
