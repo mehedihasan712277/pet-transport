@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body>
@@ -85,20 +83,20 @@
     hostel details with banner image slider and description and contact form -->
 
 
-    <section class="container mt-[95px]   mx-auto ">
+    <section class="container mt-[200px]   mx-auto ">
 
         <!-- image slider like banner -->
         <div class="relative">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide h-[62vh] md:h-[450px]">
-                        <img src="https://i.ibb.co/SrDhKhg/pet1.jpg" alt="img" class="overlay">
+                        <img src="https://i.ibb.co/SrDhKhg/pet1.jpg" alt="img" class="overlay w-full">
                     </div>
                     <div class="swiper-slide h-[62vh] md:h-[450px]">
-                        <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img" class="overlay">
+                        <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img" class="overlay w-full">
                     </div>
                     <div class="swiper-slide h-[62vh] md:h-[450px]">
-                        <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="img" class="overlay">
+                        <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="img" class="overlay w-full">
                     </div>
                 </div>
                 <!-- <div class="swiper-button-next"></div>
@@ -107,7 +105,7 @@
             </div>
         </div>
         <!-- description -->
-        <div class=" px-5 md:px-10 mt-10 mb-10 pb-10  shadow-lg">
+        <div class=" px-5 md:px-10 mt-10 mb-10 pb-10">
             <h1 class="text-3xl font-bold text-gray-900">Hostel Name</h1>
             <!-- location with location icon -->
 
@@ -126,9 +124,46 @@
                 dolor cupiditate earum doloribus quae quia odit illum a accusantium necessitatibus eligendi quis
                 corporis tempore sunt perferendis? Consequatur veritatis quibusdam ipsum dolor explicabo. Quibusdam
                 expedita id atque et, distinctio sint obcaecati sit quae quidem officia.
-
-
             </p>
+
+            <!-- -----------form--------------- -->
+            <form class="flex gap-4 mx-w-[820px] flex-wrap justify-center px-4 py-8 mt-8 bg-white shadow-xl">
+                <!-- ---------type----------- -->
+                <div class="h-12  w-full sm:w-72 lg:w-96 bg-green-100 flex items-center px-3 rounded-lg">
+                    <label for="type">Type:</label>
+                    <select name="type" id="type" class="bg-transparent flex-1">
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <!-- ----------number of pet---- -->
+                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                    <p>Number: Pet</p>
+                    <div class="flex items-center">
+                        <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <div class="h-12 w-12 flex items-center justify-center">1</div>
+                        <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- ----------check in---------- -->
+                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                    <label for="checkIn">Check In: </label>
+                    <input type="date" id="checkIn" class="bg-transparent">
+                </div>
+                <!-- ----------check out--------- -->
+                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                    <label for="checkIn">Check Out: </label>
+                    <input type="date" id="checkOut" class="bg-transparent">
+                </div>
+                <div class="flex justify-center w-full py-6">
+                    <button class="btn btn-outline rounded-full px-12">Book Now</button>
+                </div>
+            </form>
         </div>
         <!-- contact form -->
     </section>
