@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transport</title>
+    <title>Hostel</title>
     <link rel="stylesheet" href="../../style.css">
     <!-- <link rel="stylesheet" href="../../output/output.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -77,164 +77,223 @@
 
 
     <!-- content -->
-    <div class="mt-[100px]  mb-16  container mx-auto shadow rounded-lg">
-        <div class="pt-8">
-            <p class="text-center font-bold text-3xl">Hostels</p>
-            <p class="text-center font-semibold">
-                We ensure the best service for your pet
-            </p>
-            <br>
-        </div>
-
-        <!-- a search bar and select box for selecting area -->
-
-        <form>
-            <div class=" md:flex justify-between items-center gap-4 p-4">
-
-                <div class="mb-5 md:mb-0 flex w-full md:w-1/3 justify-between gap-2  items-center">
-
-                    <!-- select box for selecting the main area and after selecting the main area there will be another select box for selecting sub area -->
-
-                    <select name="area" id="area" class="p-2 rounded-lg border-2 border-gray-300 outline-none w-full">
-                        <option value="area">Area</option>
-                        <option value="mirpur">Mirpur</option>
-                        <option value="uttara">Uttara</option>
-                        <option value="dhanmondi">Dhanmondi</option>
-                        <option value="gulshan">Gulshan</option>
-                    </select>
-
-                    <select name="sub-area" id="sub-area"
-                        class="p-2 rounded-lg border-2 border-gray-300 outline-none w-full">
-                        <option value="sub-area">Sub Area</option>
-                        <option value="mirpur-1">Mirpur-1</option>
-                        <option value="mirpur-2">Mirpur-2</option>
-                        <option value="mirpur-3">Mirpur-3</option>
-                        <option value="mirpur-4">Mirpur-4</option>
-                    </select>
-
-                </div>
-
-                <div class="w-full md:w-1/3 flex gap-2 relative">
-                    <input type="text" placeholder="Search"
-                        class="w-full p-2 rounded-lg border-2 border-gray-300 outline-none h-10">
-
-                    <!-- search button with icon -->
-
-                    <button type="submit" class="text-gray-600 absolute p-2 right-3 rounded-lg">
-                        <i class="fa-solid fa-search"></i>
-                    </button>
-
-                </div>
-
+    <div class="pt-36 pb-20 px-4 md:px-12 lg:px-20 xl:px-32 space-y-20">
+        <!-- -----------form--------------- -->
+        <form class="flex gap-4 mx-w-[820px] flex-wrap justify-center px-4 py-8 bg-white shadow-xl">
+            <!-- ---------type----------- -->
+            <div class="h-12  w-full sm:w-72 lg:w-96 bg-green-100 flex items-center px-3 rounded-lg">
+                <label for="type">Type:</label>
+                <select name="type" id="type" class="bg-transparent flex-1">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                    <option value="others">Others</option>
+                </select>
             </div>
-
+            <!-- ----------number of pet---- -->
+            <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                <p>Number: Pet</p>
+                <div class="flex items-center">
+                    <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <div class="h-12 w-12 flex items-center justify-center">1</div>
+                    <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ----------check in---------- -->
+            <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                <label for="checkIn">Check In: </label>
+                <input type="date" id="checkIn" class="bg-transparent">
+            </div>
+            <!-- ----------check out--------- -->
+            <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                <label for="checkIn">Check Out: </label>
+                <input type="date" id="checkOut" class="bg-transparent">
+            </div>
         </form>
-        <!-- hostel card inside a  container-->
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-
-            <a href="./hostelDetails.html">
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl duration-200">
-                    <img src="../../images/cats.jpg" alt="hostel" class="w-full h-60 rounded-t-lg object-cover">
-                    <div class="p-4">
-                        <p class="font-bold text-xl">Beautiful Hostel 1 </p>
-
-                        <!-- location with font awesome icons -->
-
-                        <div class="flex items-center gap-2 my-2">
-                            <p>
-                                <i class="fa-solid fa-map-marker-alt"></i>
-                            <p class="text-gray-500"> Mirpur, Dhaka</p>
-                            </p>
-                        </div>
-
-                        <p class="text-gray-500">
-                            voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque
-                            nihil
-                            laborum id voluptate error omnis totam ea, fugit aut reprehenderit aspernatur autem. Velit
-                        </p>
-                        </p>
-                    </div>
+        <!-- ----------heading------------------ -->
+        <p class="text-xl md:text-3xl lg:text-5xl text-center">Find best accommodation for your pet</p>
+        <!-- ------------------------------------------box-------------------------------------- -->
+        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
+            <!-- --------image------ -->
+            <div class="flex-1 h-full">
+                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
+            </div>
+            <!-- --------description--- -->
+            <div class="flex-1">
+                <!-- -------heading -->
+                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
+                    <p class="font-bold text-xl">Cat House 1</p>
+                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
                 </div>
-            </a>
-            <a href="./hostelDetails.html">
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl duration-200">
-                    <img src="../../images/cats.jpg" alt="hostel" class="w-full h-60 rounded-t-lg object-cover">
-                    <div class="p-4">
-                        <p class="font-bold text-xl">Beautiful Hostel 1 </p>
-
-                        <!-- location with font awesome icons -->
-
-                        <div class="flex items-center gap-2 my-2">
-                            <p>
-                                <i class="fa-solid fa-map-marker-alt"></i>
-                            <p class="text-gray-500"> Mirpur, Dhaka</p>
-                            </p>
-                        </div>
-
-                        <p class="text-gray-500">
-                            voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque
-                            nihil
-                            laborum id voluptate error omnis totam ea, fugit aut reprehenderit aspernatur autem. Velit
-                        </p>
-                        </p>
-                    </div>
+                <!-- ------main description----- -->
+                <div>
+                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
+                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                    </p>
+                    <a href="./hostelDetails.html" target="_blank">
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
+                            Explore
+                        </button>
+                    </a>
                 </div>
-            </a>
-            <a href="./hostelDetails.html">
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl duration-200">
-                    <img src="../../images/cats.jpg" alt="hostel" class="w-full h-60 rounded-t-lg object-cover">
-                    <div class="p-4">
-                        <p class="font-bold text-xl">Beautiful Hostel 1 </p>
-
-                        <!-- location with font awesome icons -->
-
-                        <div class="flex items-center gap-2 my-2">
-                            <p>
-                                <i class="fa-solid fa-map-marker-alt"></i>
-                            <p class="text-gray-500"> Mirpur, Dhaka</p>
-                            </p>
-                        </div>
-
-                        <p class="text-gray-500">
-                            voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque
-                            nihil
-                            laborum id voluptate error omnis totam ea, fugit aut reprehenderit aspernatur autem. Velit
-                        </p>
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="./hostelDetails.html">
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl duration-200">
-                    <img src="../../images/cats.jpg" alt="hostel" class="w-full h-60 rounded-t-lg object-cover">
-                    <div class="p-4">
-                        <p class="font-bold text-xl">Beautiful Hostel 1 </p>
-
-                        <!-- location with font awesome icons -->
-
-                        <div class="flex items-center gap-2 my-2">
-                            <p>
-                                <i class="fa-solid fa-map-marker-alt"></i>
-                            <p class="text-gray-500"> Mirpur, Dhaka</p>
-                            </p>
-                        </div>
-
-                        <p class="text-gray-500">
-                            voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloremque
-                            nihil
-                            laborum id voluptate error omnis totam ea, fugit aut reprehenderit aspernatur autem. Velit
-                        </p>
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-
-
+            </div>
         </div>
 
+        <!-- ------------------------------------------box-------------------------------------- -->
+        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
+            <!-- --------image------ -->
+            <div class="flex-1 h-full">
+                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
+            </div>
+            <!-- --------description--- -->
+            <div class="flex-1">
+                <!-- -------heading -->
+                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
+                    <p class="font-bold text-xl">Cat House 1</p>
+                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
+                </div>
+                <!-- ------main description----- -->
+                <div>
+                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
+                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                    </p>
+                    <a href="./hostelDetails.html" target="_blank">
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
+                            Explore
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
 
+        <!-- ------------------------------------------box-------------------------------------- -->
+        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
+            <!-- --------image------ -->
+            <div class="flex-1 h-full">
+                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
+            </div>
+            <!-- --------description--- -->
+            <div class="flex-1">
+                <!-- -------heading -->
+                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
+                    <p class="font-bold text-xl">Cat House 1</p>
+                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
+                </div>
+                <!-- ------main description----- -->
+                <div>
+                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
+                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                    </p>
+                    <a href="./hostelDetails.html" target="_blank">
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
+                            Explore
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------box-------------------------------------- -->
+        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
+            <!-- --------image------ -->
+            <div class="flex-1 h-full">
+                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
+            </div>
+            <!-- --------description--- -->
+            <div class="flex-1">
+                <!-- -------heading -->
+                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
+                    <p class="font-bold text-xl">Cat House 1</p>
+                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
+                </div>
+                <!-- ------main description----- -->
+                <div>
+                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
+                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                    </p>
+                    <a href="./hostelDetails.html" target="_blank">
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
+                            Explore
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------box-------------------------------------- -->
+        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
+            <!-- --------image------ -->
+            <div class="flex-1 h-full">
+                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
+            </div>
+            <!-- --------description--- -->
+            <div class="flex-1">
+                <!-- -------heading -->
+                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
+                    <p class="font-bold text-xl">Cat House 1</p>
+                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
+                </div>
+                <!-- ------main description----- -->
+                <div>
+                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
+                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                    </p>
+                    <a href="./hostelDetails.html" target="_blank">
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
+                            Explore
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------box-------------------------------------- -->
+        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
+            <!-- --------image------ -->
+            <div class="flex-1 h-full">
+                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
+            </div>
+            <!-- --------description--- -->
+            <div class="flex-1">
+                <!-- -------heading -->
+                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
+                    <p class="font-bold text-xl">Cat House 1</p>
+                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
+                </div>
+                <!-- ------main description----- -->
+                <div>
+                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
+                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                    </p>
+                    <a href="./hostelDetails.html" target="_blank">
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
+                            Explore
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- footer -->
