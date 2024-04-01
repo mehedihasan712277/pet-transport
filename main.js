@@ -1,3 +1,5 @@
+const { domainToUnicode } = require("url");
+
 // show mwnu bar
 let showMenubar = () => {
   document.getElementById("sideMenuBar").style.width = "100%";
@@ -62,3 +64,15 @@ function setCookie(value) {
 
   document.cookie = cookieString;
 }
+
+
+// notification handle---------------------
+// show notification-------------------
+(function () {
+  document.getElementById("notification").style.display = "block";
+})();
+//hide notificaton---------------
+function hideNotification() {
+  document.getElementById("notification").style.display = "none";
+}
+//-----------------------------------------
