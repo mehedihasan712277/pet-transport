@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-gray-100">
 
     <!-- ---------------------------------------navigation bar----------------------------------------- -->
 
@@ -75,187 +75,263 @@
 
     </header>
 
-
-    <!-- content -->
-    <div class="pt-36 pb-20 px-4 md:px-12 lg:px-20 xl:px-32 space-y-20">
-        <!-- ----------heading------------------ -->
-        <p class="text-xl md:text-3xl lg:text-5xl text-center">Find best accommodation for your pet</p>
-        <!-- ------------------------------------------box-------------------------------------- -->
-        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
-            <!-- --------image------ -->
-            <div class="flex-1 h-full">
-                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
-            </div>
-            <!-- --------description--- -->
-            <div class="flex-1">
-                <!-- -------heading -->
-                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
-                    <p class="font-bold text-xl">Cat House 1</p>
-                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
+    <!-- ---------------------------------------banner------------------------------------------------- -->
+    <div class="banner-hostel relative pt-20 pb-32 lg:pt-32 lg:pb-56">
+        <p class="text-xl md:text-3xl lg:text-5xl font-bold text-white text-center">Check Availablity</p>
+        <div class="absolute top-44 lg:top-64 right-0 left-0">
+            <form
+                class="flex gap-4 max-w-[820px] flex-wrap justify-center px-4 py-12 mt-8 bg-white shadow-xl mx-auto lg:rounded-xl">
+                <!-- ---------type----------- -->
+                <div class="h-12  w-full sm:w-72 lg:w-96 bg-green-100 flex items-center px-3 rounded-lg">
+                    <label for="type">Type:</label>
+                    <select name="type" id="type" class="bg-transparent flex-1">
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="others">Others</option>
+                    </select>
                 </div>
-                <!-- ------main description----- -->
-                <div>
-                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
-                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
-                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
-                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
-                    </p>
-                    <a href="./hostelDetails.html" target="_blank">
-                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
-                            Explore
+                <!-- ----------number of pet---- -->
+                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                    <p>Number: Pet</p>
+                    <div class="flex items-center">
+                        <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
+                            <i class="fa-solid fa-minus"></i>
                         </button>
-                    </a>
+                        <div class="h-12 w-12 flex items-center justify-center">1</div>
+                        <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- ----------check in---------- -->
+                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                    <label for="checkIn">Check In: </label>
+                    <input type="date" id="checkIn" class="bg-transparent">
+                </div>
+                <!-- ----------check out--------- -->
+                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
+                    <label for="checkIn">Check Out: </label>
+                    <input type="date" id="checkOut" class="bg-transparent">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- --------------------content------------------------- -->
+    <div class="mt-64 pb-20 px-4 md:px-12 lg:px-20 xl:px-32 space-y-20">
+        <p class="uppercase pb-8 lg:pb-12 text-center text-xl md:text-3xl lg:text-6xl font-bold">Discover our rooms</p>
+        <!-- ------------------------------------------box 1-------------------------------------- -->
+        <div>
+            <div class='grid grid-cols-1 md:grid-cols-2 gap-4 bg-white'>
+                <div class=''>
+                    <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img" class='h-full' />
+                </div>
+                <div class='p-4'>
+                    <!-- -------heading -->
+                    <div class="flex justify-between border-b-[1px] border-gray-400 pb-2">
+                        <p class="font-bold text-xl">Cat House 1</p>
+                        <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night
+                        </p>
+                    </div>
+                    <!-- ------main description----- -->
+                    <div>
+                        <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                            beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                            Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt
+                            facere
+                            perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                        </p>
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full"
+                            onclick="showBooking()">
+                            Book Now
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------booking------------------ -->
+            <div id="booking" class="hidden">
+                <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-4 py-12">
+                    <!-- ----------image container----------- -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="h-44">
+                            <img src="../../images/product-jpeg-500x500.webp" alt="img"
+                                class="h-full w-full rounded-lg">
+                        </div>
+                        <div class="h-44">
+                            <img src="../../images/Photo from ~L(11)-78919ba3.jpg" alt="img"
+                                class="h-full w-full rounded-lg">
+                        </div>
+                    </div>
+                    <!-- ----------form container------------ -->
+                    <div class="py-12 bg-white bg-white lg:rounded-xl">
+                        <p class="text-2xl font-bold text-center border-b-2 border-gray-400 mb-6 pb-2 uppercase">Booking
+                        </p>
+                        <form class="grid grid-cols-1 md:grid-cols-2 justify-center gap-4 px-4">
+                            <!-- ----------check in---------- -->
+                            <div class="">
+                                <label for="checkIn">Check In: </label>
+                                <br>
+                                <input type="date" id="checkIn"
+                                    class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg">
+                            </div>
+                            <!-- ----------check out--------- -->
+                            <div class="">
+                                <label for="checkOut">Check Out: </label>
+                                <br>
+                                <input type="date" id="checkOut"
+                                    class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg">
+                            </div>
+                            <!-- ----------guest---------------------- -->
+                            <div>
+                                <span>Guest</span>
+                                <br>
+                                <input type="text" class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg"
+                                    value="1" readonly>
+                            </div>
+                            <!-- ----------Rooms---- -->
+                            <div>
+                                <span>Rooms</span>
+                                <br>
+                                <input type="text" class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg">
+                            </div>
+                            <!-- -------buttons--------------- -->
+                            <div class="space-y-12">
+                                <!-- ---------discount---------- -->
+                                <div>
+                                    <p>Deposite Option 50% per Item</p>
+                                    <div class="flex">
+                                        <p class="p-3 w-1/2 text-sm text-center font-semibold text-white bg-gray-400">
+                                            Pay
+                                            Deposite
+                                        </p>
+                                        <p class="p-3 w-1/2 text-sm text-center font-semibold text-white bg-black">Full
+                                            Payment</p>
+                                    </div>
+                                </div>
+                                <!-- ---------Book now---------- -->
+                                <div>
+                                    <button class="btn bg-black text-white btn-lg px-8">BOOK NOW</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ----------bottom close button------- -->
+                    <div class="absolute right-0 left-0 -bottom-12 bg-black text-white py-4 rounded-b-lg">
+                        <div onclick="hideBooking()"
+                            class="border-white border-2 h-6 w-6 mx-auto rounded-full flex justify-center items-center cursor-pointer">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- ------------------------------------------box-------------------------------------- -->
-        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
-            <!-- --------image------ -->
-            <div class="flex-1 h-full">
-                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
-            </div>
-            <!-- --------description--- -->
-            <div class="flex-1">
-                <!-- -------heading -->
-                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
-                    <p class="font-bold text-xl">Cat House 1</p>
-                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
+        <!-- ------------------------------------------box 2-------------------------------------- -->
+        <div>
+            <div class='grid grid-cols-1 md:grid-cols-2 gap-4 bg-white'>
+                <div class=''>
+                    <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img" class='h-full' />
                 </div>
-                <!-- ------main description----- -->
-                <div>
-                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
-                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
-                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
-                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
-                    </p>
-                    <a href="./hostelDetails.html" target="_blank">
-                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
-                            Explore
+                <div class='p-4'>
+                    <!-- -------heading -->
+                    <div class="flex justify-between border-b-[1px] border-gray-400 pb-2">
+                        <p class="font-bold text-xl">Cat House 1</p>
+                        <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night
+                        </p>
+                    </div>
+                    <!-- ------main description----- -->
+                    <div>
+                        <p class="text-xs md:text-sm text-justify md:text-left py-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
+                            beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
+                            Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt
+                            facere
+                            perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
+                        </p>
+                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full"
+                            onclick="showBooking1()">
+                            Book Now
                         </button>
-                    </a>
-                </div>
-            </div>
-        </div>
 
-        <!-- ------------------------------------------box-------------------------------------- -->
-        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
-            <!-- --------image------ -->
-            <div class="flex-1 h-full">
-                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
-            </div>
-            <!-- --------description--- -->
-            <div class="flex-1">
-                <!-- -------heading -->
-                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
-                    <p class="font-bold text-xl">Cat House 1</p>
-                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
-                </div>
-                <!-- ------main description----- -->
-                <div>
-                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
-                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
-                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
-                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
-                    </p>
-                    <a href="./hostelDetails.html" target="_blank">
-                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
-                            Explore
-                        </button>
-                    </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- ------------------------------------------box-------------------------------------- -->
-        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
-            <!-- --------image------ -->
-            <div class="flex-1 h-full">
-                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
-            </div>
-            <!-- --------description--- -->
-            <div class="flex-1">
-                <!-- -------heading -->
-                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
-                    <p class="font-bold text-xl">Cat House 1</p>
-                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
-                </div>
-                <!-- ------main description----- -->
-                <div>
-                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
-                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
-                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
-                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
-                    </p>
-                    <a href="./hostelDetails.html" target="_blank">
-                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
-                            Explore
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ------------------------------------------box-------------------------------------- -->
-        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
-            <!-- --------image------ -->
-            <div class="flex-1 h-full">
-                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
-            </div>
-            <!-- --------description--- -->
-            <div class="flex-1">
-                <!-- -------heading -->
-                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
-                    <p class="font-bold text-xl">Cat House 1</p>
-                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
-                </div>
-                <!-- ------main description----- -->
-                <div>
-                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
-                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
-                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
-                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
-                    </p>
-                    <a href="./hostelDetails.html" target="_blank">
-                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
-                            Explore
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ------------------------------------------box-------------------------------------- -->
-        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-12 shadow-lg">
-            <!-- --------image------ -->
-            <div class="flex-1 h-full">
-                <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="cat" class="h-full">
-            </div>
-            <!-- --------description--- -->
-            <div class="flex-1">
-                <!-- -------heading -->
-                <div class="flex justify-between border-b-[1px] border-gray-400 pb-2 pt-2 mr-2">
-                    <p class="font-bold text-xl">Cat House 1</p>
-                    <p class="text-cyan-500 font-bold"><i class="fa-solid fa-bangladeshi-taka-sign"></i>700/night</p>
-                </div>
-                <!-- ------main description----- -->
-                <div>
-                    <p class="text-xs md:text-sm text-justify md:text-left py-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam, vel ad voluptatibus
-                        beatae dolores dignissimos illo nulla cum molestias, eum esse, dicta eaque facilis sint.
-                        Officiis totam harum qui molestias eos consectetur cupiditate atque, itaque odit incidunt facere
-                        perspiciatis voluptas, blanditiis ea recusandae id deserunt cumque, at beatae delectus.
-                    </p>
-                    <a href="./hostelDetails.html" target="_blank">
-                        <button class="btn btn-sm lg:btn-md lg:px-12 btn-neutral btn-outline rounded-full">
-                            Explore
-                        </button>
-                    </a>
+            <!-- ----------------------booking------------------ -->
+            <div id="booking1" class="hidden">
+                <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-4 py-12">
+                    <!-- ----------image container----------- -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="h-44">
+                            <img src="../../images/product-jpeg-500x500.webp" alt="img"
+                                class="h-full w-full rounded-lg">
+                        </div>
+                        <div class="h-44">
+                            <img src="../../images/Photo from ~L(11)-78919ba3.jpg" alt="img"
+                                class="h-full w-full rounded-lg">
+                        </div>
+                    </div>
+                    <!-- ----------form container------------ -->
+                    <div class="py-12 bg-white bg-white lg:rounded-xl">
+                        <p class="text-2xl font-bold text-center border-b-2 border-gray-400 mb-6 pb-2 uppercase">Booking
+                        </p>
+                        <form class="grid grid-cols-1 md:grid-cols-2 justify-center gap-4 px-4">
+                            <!-- ----------check in---------- -->
+                            <div class="">
+                                <label for="checkIn">Check In: </label>
+                                <br>
+                                <input type="date" id="checkIn"
+                                    class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg">
+                            </div>
+                            <!-- ----------check out--------- -->
+                            <div class="">
+                                <label for="checkOut">Check Out: </label>
+                                <br>
+                                <input type="date" id="checkOut"
+                                    class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg">
+                            </div>
+                            <!-- ----------guest---------------------- -->
+                            <div>
+                                <span>Guest</span>
+                                <br>
+                                <input type="text" class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg"
+                                    value="1" readonly>
+                            </div>
+                            <!-- ----------Rooms---- -->
+                            <div>
+                                <span>Rooms</span>
+                                <br>
+                                <input type="text" class="h-12 w-full border-[2px] border-gray-400 px-3 rounded-lg">
+                            </div>
+                            <!-- -------buttons--------------- -->
+                            <div class="space-y-12">
+                                <!-- ---------discount---------- -->
+                                <div>
+                                    <p>Deposite Option 50% per Item</p>
+                                    <div class="flex">
+                                        <p class="p-3 w-1/2 text-sm text-center font-semibold text-white bg-gray-400">
+                                            Pay
+                                            Deposite
+                                        </p>
+                                        <p class="p-3 w-1/2 text-sm text-center font-semibold text-white bg-black">Full
+                                            Payment</p>
+                                    </div>
+                                </div>
+                                <!-- ---------Book now---------- -->
+                                <div>
+                                    <button class="btn bg-black text-white btn-lg px-8">BOOK NOW</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ----------bottom close button------- -->
+                    <div class="absolute right-0 left-0 -bottom-12 bg-black text-white py-4 rounded-b-lg">
+                        <div onclick="hideBooking1()"
+                            class="border-white border-2 h-6 w-6 mx-auto rounded-full flex justify-center items-center cursor-pointer">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -353,6 +429,9 @@
                 <a href="#contact" class="">Contact</a>
             </div> -->
     </div>
+
+    <!-- ------------script file ------------- -->
+    <script src="../../main.js"></script>
 </body>
 
 </html>

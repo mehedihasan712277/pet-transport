@@ -76,3 +76,22 @@ function hideNotification() {
   document.getElementById("notification").style.display = "none";
 }
 //-----------------------------------------
+
+// hostel booking handle--------------------
+function showBooking() {
+  document.getElementById("booking").style.display = "block";
+}
+
+function hideBooking() {
+  document.getElementById("booking").style.display = "none";
+}
+
+
+
+function showBooking1() {
+  document.getElementById("booking1").style.display = "block";
+}
+
+function hideBooking1() {
+  document.getElementById("booking1").style.display = "none";
+}
