@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- -----swiper js---------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -151,12 +154,31 @@
         </div>
     </div>
     <!-- banner -->
-    <div class="mt-12">
-        <div class="bgBlog flex items-center pl-6 h-64 md:h-80">
-            <div>
-                <p class="text-gray-800 text-3xl md:text-7xl font-bold">Pet Transport BD</p>
-                <p class="text-gray-800 md:text-2xl">Get any solution of your pet</p>
+    <div class="mt-[65px]">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="w-full h-[250px] sm:h-[350px] lg:h-[400px] xl:h-[450px]">
+                        <img src="../../images/blog-bg1.jpg" alt="img"
+                            class="w-full h-[250px] sm:h-[350px] lg:h-[400px] xl:h-[450px]">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="w-full h-64">
+                        <img src="../../images/blog-bg2.jpg" alt="img"
+                            class="w-full h-[250px] sm:h-[350px] lg:h-[400px] xl:h-[450px]">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="w-full h-64">
+                        <img src="../../images/blog-bg3.jpg" alt="img"
+                            class="w-full h-[250px] sm:h-[350px] lg:h-[400px] xl:h-[450px]">
+                    </div>
+                </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 
@@ -567,6 +589,25 @@
         </div>
     </footer>
     <script src="../../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
