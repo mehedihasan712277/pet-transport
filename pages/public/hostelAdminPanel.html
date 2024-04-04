@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -10,16 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
     <style>
-        table,
-        th,
-        td {
-            border: 1px solid gray;
-            border-collapse: collapse;
+        .active {
+            background-color: white;
         }
 
-        th,
-        td {
-            padding: 8px 16px;
+        /* table, */
+        /* th, */
+        tr {
+            border-bottom: 1px solid rgb(220, 220, 220);
+            border-collapse: collapse;
         }
 
         .overflow-x-auto {
@@ -77,58 +76,234 @@
 </head>
 
 <body>
-    <div>
+    <div class="bg-gray-100 px-4 min-h-screen">
         <!-- -----------------------heading------------------------- -->
-        <div class="flex justify-between">
+        <div class="flex justify-between py-6">
             <div>
-                <p class="text-xl font-bold">Bookings</p>
+                <p class="text-xl font-bold text-cyan-500">Bookings</p>
+                <p class="text-sm">Total request for booking: 10</p>
             </div>
             <div>
-                <button class="btn btn-sm text-white bg-cyan-400 rounded-none">
+                <button class="btn btn-sm text-white bg-cyan-400 rounded-none border-none outline-none shadow-none">
                     <i class="fa-solid fa-arrows-rotate"></i>
                     Refresh
                 </button>
             </div>
         </div>
-        <!-- -----------------------order table----------------------- -->
+        <!-- -----------------------tab option------------------------------- -->
+        <div class="flex justify-center" id="tabs">
+            <div class="py-2 w-20 md:w-32 text-center text-sm md:text-lg tabBtn cursor-pointer active">All</div>
+            <div class="py-2 w-20 md:w-32 text-center text-sm md:text-lg tabBtn cursor-pointer">Placed</div>
+            <div class="py-2 w-20 md:w-32 text-center text-sm md:text-lg tabBtn cursor-pointer">Confirmed</div>
+        </div>
+        <!-- -----------------------Placed order table----------------------- -->
         <div class="px-6">
             <div class="overflow-x-auto section">
-                <table>
+                <table class="mx-auto bg-white">
                     <thead>
                         <tr>
-                            <th>Sr. No</th>
-                            <th>Order Id</th>
-                            <th>Hostel Details</th>
-                            <th>Date (Check in)</th>
-                            <th>Date (Check Out)</th>
-                            <th>Total Pet</th>
-                            <th>Total Room</th>
-                            <th>Pet Type</th>
-                            <th>Contact</th>
-                            <th>Price</th>
-                            <th>Status</th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Sr. No
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Order Id
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Hostel
+                                Details
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Date
+                                (Check in)
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Date
+                                (Check
+                                Out)</th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Total Pet
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Total Room
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Pet Type
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Contact
+                            </th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Price</th>
+                            <th class="text-gray-600 p-[4px] md:p-3 text-xs sm:text-sm md:text-lg">Status
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>ABC123</td>
-                            <td>1</td>
-                            <td>18-4-2024</td>
-                            <td>22-4-2024</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>Cat</td>
-                            <td>01405712345</td>
-                            <td>3000</td>
-                            <td><button class="btn btn-sm rounded-full bg-green-400">Confirm</button></td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-yellow-400">Confirm</button></td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-green-400">Complete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-yellow-400">Confirm</button></td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-green-400">Complete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-yellow-400">Confirm</button></td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-green-400">Complete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-yellow-400">Confirm</button></td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-green-400">Complete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-yellow-400">Confirm</button></td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">ABC123</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Petbacker <br> Banglanagar, Dhaka</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">18-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">22-4-2024</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">1</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">Cat</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">01405712345</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm ">3000</td>
+                            <td class="p-[4px] md:p-3 text-xs sm:text-sm "><button
+                                    class="btn btn-sm rounded-full bg-green-400">Complete</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
 
             </div>
         </div>
+        <!-- -----------------------confirmed order table-------------------- -->
+        <div>
+
+        </div>
     </div>
+    <!-- <script src="../../main.js"></script> -->
+    <script>
+        const tabBtn = document.querySelectorAll(".tabBtn");
+
+        tabBtn.forEach(ele => {
+            ele.addEventListener("click", (e) => {
+                tabBtn.forEach(item => item.classList.remove("active"));
+                e.target.classList.add("active")
+            })
+        })
+    </script>
 </body>
 
 </html>

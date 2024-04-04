@@ -1,3 +1,4 @@
+const { log } = require("console");
 const { domainToUnicode } = require("url");
 
 // show mwnu bar
@@ -95,3 +96,8 @@ function showBooking1() {
 function hideBooking1() {
   document.getElementById("booking1").style.display = "none";
 }
+
+
+// ---------------tabs color change in hostel admin panel------------------
+const div = document.getElementById("tabs")
+console.log("hi");
