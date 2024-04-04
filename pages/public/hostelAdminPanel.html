@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px 16px;
+        }
+
+        .overflow-x-auto {
+            overflow-x: auto;
+            position: relative;
+        }
+
+        /* ----------------------------scroll bar------------------- */
+        /* --------------for chrome------------------ */
+        .section::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        /* Track */
+        .section::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+            background: rgb(200, 200, 200);
+        }
+
+        /* Handle */
+        .section::-webkit-scrollbar-thumb {
+            background: rgb(120, 120, 120);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        .section::-webkit-scrollbar-thumb:hover {
+            background: rgb(100, 100, 100);
+        }
+
+        /* For Firefox---------------------------------------- */
+        .section::-moz-scrollbar {
+            height: 10px;
+        }
+
+        /* Track */
+        .section::-moz-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+            background: rgb(200, 200, 200);
+        }
+
+        /* Handle */
+        .section::-moz-scrollbar-thumb {
+            background: rgb(120, 120, 120);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        .section::-moz-scrollbar-thumb:hover {
+            background: rgb(100, 100, 100);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- -----------------------heading------------------------- -->
+        <div class="flex justify-between">
+            <div>
+                <p class="text-xl font-bold">Bookings</p>
+            </div>
+            <div>
+                <button class="btn btn-sm text-white bg-cyan-400 rounded-none">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    Refresh
+                </button>
+            </div>
+        </div>
+        <!-- -----------------------order table----------------------- -->
+        <div class="px-6">
+            <div class="overflow-x-auto section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Order Id</th>
+                            <th>Hostel Details</th>
+                            <th>Date (Check in)</th>
+                            <th>Date (Check Out)</th>
+                            <th>Total Pet</th>
+                            <th>Total Room</th>
+                            <th>Pet Type</th>
+                            <th>Contact</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>ABC123</td>
+                            <td>1</td>
+                            <td>18-4-2024</td>
+                            <td>22-4-2024</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Cat</td>
+                            <td>01405712345</td>
+                            <td>3000</td>
+                            <td><button class="btn btn-sm rounded-full bg-green-400">Confirm</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
