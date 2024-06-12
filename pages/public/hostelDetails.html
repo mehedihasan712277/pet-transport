@@ -9,16 +9,12 @@
     <!-- <link rel="stylesheet" href="../../output/output.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <script src="https://kit.fontawesome.com/43bdb0fd4f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
     <!-- ---------------------------------------navigation bar----------------------------------------- -->
-
     <header
         class="section  px-4 md:px-12 lg:px-20 relative  z-[3000]   bg-gradient-to-r from-cyan-500 to-blue-500  select-none "
         id="home">
@@ -126,44 +122,69 @@
                 expedita id atque et, distinctio sint obcaecati sit quae quidem officia.
             </p>
 
-            <!-- -----------form--------------- -->
-            <form class="flex gap-4 mx-w-[820px] flex-wrap justify-center px-4 py-8 mt-8 bg-white shadow-xl">
-                <!-- ---------type----------- -->
-                <div class="h-12  w-full sm:w-72 lg:w-96 bg-green-100 flex items-center px-3 rounded-lg">
-                    <label for="type">Type:</label>
-                    <select name="type" id="type" class="bg-transparent flex-1">
-                        <option value="cat">Cat</option>
-                        <option value="dog">Dog</option>
-                        <option value="others">Others</option>
-                    </select>
-                </div>
-                <!-- ----------number of pet---- -->
-                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
-                    <p>Number: Pet</p>
-                    <div class="flex items-center">
-                        <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                        <div class="h-12 w-12 flex items-center justify-center">1</div>
-                        <button class="btn btn-sm border-none outline-none shadow-none rounded-none bg-transparent">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
+            <div class="flex justify-center gap-4 flex-col items-center md:flex-row py-12">
+                <!-- plan 1 -->
+                <div class="bg-slate-100 w-fit px-6 py-8 rounded-lg shadow-lg space-y-4">
+                    <div class="flex justify-between items-center">
+                        <p class="font-bold text-2xl">Regular</p>
+                        <p class="text-sm">BDT: 1000</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                    </div>
+                    <div class="flex justify-center w-full">
+                        <button class="btn btn-outline rounded-full">Get this plan</button>
                     </div>
                 </div>
-                <!-- ----------check in---------- -->
-                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
-                    <label for="checkIn">Check In: </label>
-                    <input type="date" id="checkIn" class="bg-transparent">
+                <!-- plan 2 -->
+                <div class="bg-slate-100 w-fit px-6 py-8 rounded-lg shadow-lg space-y-4">
+                    <div class="flex justify-between items-center">
+                        <p class="font-bold text-2xl">Regular</p>
+                        <p class="text-sm">BDT: 1000</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                    </div>
+                    <div class="flex justify-center w-full">
+                        <button class="btn btn-outline rounded-full">Get this plan</button>
+                    </div>
                 </div>
-                <!-- ----------check out--------- -->
-                <div class="h-12 w-full sm:w-72 lg:w-96 bg-green-100 flex justify-between items-center px-3 rounded-lg">
-                    <label for="checkIn">Check Out: </label>
-                    <input type="date" id="checkOut" class="bg-transparent">
+                <!-- plan 3 -->
+                <div class="bg-slate-100 w-fit px-6 py-8 rounded-lg shadow-lg space-y-4">
+                    <div class="flex justify-between items-center">
+                        <p class="font-bold text-2xl">Regular</p>
+                        <p class="text-sm">BDT: 1000</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
+                            amet.</p>
+                    </div>
+                    <div class="flex justify-center w-full">
+                        <button class="btn btn-outline rounded-full">Get this plan</button>
+                    </div>
                 </div>
-                <div class="flex justify-center w-full py-6">
-                    <button class="btn btn-outline rounded-full px-12">Book Now</button>
-                </div>
-            </form>
+            </div>
+
         </div>
         <!-- contact form -->
     </section>
