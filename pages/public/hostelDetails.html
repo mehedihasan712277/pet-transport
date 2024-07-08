@@ -85,14 +85,17 @@
         <div class="relative">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide h-[62vh] md:h-[450px]">
-                        <img src="https://i.ibb.co/SrDhKhg/pet1.jpg" alt="img" class="overlay w-full">
+                    <div class="swiper-slide h-[200px] sm:h-[350px] md:h-[450px]">
+                        <img src="https://i.ibb.co/SrDhKhg/pet1.jpg" alt="img"
+                            class="h-[200px] sm:h-[350px] md:h-[450px] w-full">
                     </div>
-                    <div class="swiper-slide h-[62vh] md:h-[450px]">
-                        <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img" class="overlay w-full">
+                    <div class="swiper-slide h-[200px] sm:h-[350px] md:h-[450px]">
+                        <img src="https://i.ibb.co/0jcf3jc/pet2.jpg" alt="img"
+                            class="h-[200px] sm:h-[350px] md:h-[450px] w-full">
                     </div>
-                    <div class="swiper-slide h-[62vh] md:h-[450px]">
-                        <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="img" class="overlay w-full">
+                    <div class="swiper-slide h-[200px] sm:h-[350px] md:h-[450px]">
+                        <img src="https://i.ibb.co/SygghYv/pet3.jpg" alt="img"
+                            class="h-[200px] sm:h-[350px] md:h-[450px] w-full">
                     </div>
                 </div>
                 <!-- <div class="swiper-button-next"></div>
@@ -100,91 +103,329 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+
+
         <!-- description -->
-        <div class=" px-5 md:px-10 mt-10 mb-10 pb-10">
-            <h1 class="text-3xl font-bold text-gray-900">Hostel Name</h1>
-            <!-- location with location icon -->
+        <div class="px-5 md:px-10 flex flex-col md:flex-row gap-4">
+            <!-- ------main description -->
+            <div class="mt-10 mb-10 pb-10">
+                <!-- upper part -->
+                <div class="flex justify-between gap-2">
+                    <div>
+                        <!-- title -->
+                        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">Hostel Name</h1>
+                        <!-- location with location icon -->
+                        <div class="flex gap-2 items-center mt-2">
+                            <i class="fa-solid fa-map-marker-alt text-cyan-500"></i>
+                            <p class="sm:text-lg text-gray-400 font-semibold">Dhaka, Bangladesh</p>
+                        </div>
+                        <!-- badge -->
+                        <p class="bg-slate-100 w-fit px-3 py-1 text-xs rounded mt-3">
+                            Company-<span class="font-bold">Serviced</span>
+                        </p>
+                        <p class="py-3">5.0 . Check-in-rating</p>
+                    </div>
+                    <!-- rating -->
+                    <div class="flex flex-col text-center">
+                        <p class="text-xs sm:text-xl text-white font-bold bg-green-400 p-2 rounded-t-lg">
+                            3.3 <i class="fa-solid fa-star"></i>
+                        </p>
+                        <p class="p-2 text-xs sm:text-sm bg-slate-100 rounded-b-lg">350 ratings</p>
+                    </div>
+                </div>
 
-            <div class="flex gap-2 items-center mt-2">
-                <i class="fa-solid fa-map-marker-alt text-cyan-500"></i>
-                <p class="text-lg text-gray-700 font-semibold">Dhaka, Bangladesh</p>
+                <!-- amenities -->
+                <div>
+                    <p class="text-2xl font-bold pt-8 pb-4">Amenities</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div>
+                            <i class="fa-solid fa-wind"></i>
+                            <span>AC</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-wifi"></i>
+                            <span>Wifi</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-tv"></i>
+                            <span>TV</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-hot-tub-person"></i>
+                            <span>Geyser</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Power Backup</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-elevator"></i>
+                            <span>Elevetor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- about -->
+                <div>
+                    <p class="text-2xl font-bold pt-8 pb-4">About this Hostel</p>
+                    <p class="text-xs sm:text-sm text-gray-600">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nesciunt voluptate quas soluta
+                        numquam
+                        facilis ipsum nam! Debitis eos voluptates quasi ea praesentium tenetur id minima, dolore, ad
+                        cumque
+                        vero
+                        est, ratione neque laudantium totam. Deserunt aliquid voluptatibus blanditiis sint modi dolorem
+                        fugiat
+                        atque unde? Placeat quisquam natus qui voluptate.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At minus natus autem molestias eum,
+                        aperiam
+                        dolor cupiditate earum doloribus quae quia odit illum a accusantium necessitatibus eligendi quis
+                        corporis tempore sunt perferendis? Consequatur veritatis quibusdam ipsum dolor explicabo.
+                        Quibusdam
+                        expedita id atque et, distinctio sint obcaecati sit quae quidem officia.
+                    </p>
+                </div>
+
+                <!-- rating  -->
+                <div>
+                    <p class="text-2xl font-bold pt-8 pb-4">Ratings and Reviews</p>
+                    <div class="flex">
+                        <!-- left side part -->
+                        <div
+                            class="flex justify-center items-center p-2 sm:p-4 rounded-l border-gray-300 border-[1px] border-r-0 w-2/5">
+                            <div class="flex flex-col text-center">
+                                <p class="text-sm sm:text-xl text-white font-bold bg-green-400 p-2 rounded-t-lg">
+                                    3.3 <i class="fa-solid fa-star"></i>
+                                </p>
+                                <p class="text-sm sm:text-lg bg-slate-100 font-semibold">FAIR</p>
+                                <p class="text-sm sm:text-lg px-2 pb-2 bg-slate-100 rounded-b-lg">350 ratings</p>
+                            </div>
+                        </div>
+                        <!-- right side part -->
+                        <div class="p-2 sm:py-4 sm:px-12 rounded-r border-gray-300 border-[1px] w-3/5">
+                            <div class="flex gap-2 items-center">
+                                <span class="font-bold text-gray-700">5</span>
+                                <i class="fa-regular fa-star"></i>
+                                <progress class="progress progress-warning w-full" value="45" max="100"></progress>
+                                <span class="text-gray-500">45%</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <span class="font-bold text-gray-700">4</span>
+                                <i class="fa-regular fa-star"></i>
+                                <progress class="progress progress-warning w-full" value="11" max="100"></progress>
+                                <span class="text-gray-500">11%</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <span class="font-bold text-gray-700">3</span>
+                                <i class="fa-regular fa-star"></i>
+                                <progress class="progress progress-warning w-full" value="11" max="100"></progress>
+                                <span class="text-gray-500">11%</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <span class="font-bold text-gray-700">2</span>
+                                <i class="fa-regular fa-star"></i>
+                                <progress class="progress progress-warning w-full" value="6" max="100"></progress>
+                                <span class="text-gray-500">6%</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <span class="font-bold text-gray-700">1</span>
+                                <i class="fa-regular fa-star"></i>
+                                <progress class="progress progress-warning w-full" value="25" max="100"></progress>
+                                <span class="text-gray-500">25%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- reviews -->
+                <div class="space-y-4 py-4">
+                    <!-- review 1 -->
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2 items-center">
+                                <span class="text-gray-300 text-2xl"><i class="fa-solid fa-circle-user"></i></span>
+                                <span class="text-gray-700 font-bold">Jhon doe</span>
+                                <span class="text-xs text-gray-500">16 May 2024</span>
+                            </div>
+                            <div class="bg-green-400 p-2 rounded space-x-2 text-white font-bold text-xs">
+                                4 <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 py-4 text-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quia voluptas. Beatae est
+                            odio
+                            iusto ipsum nemo, sed molestiae non ut. Maxime eos a sequi?
+                        </p>
+
+                        <div class="">
+                            <img src="https://i.ibb.co/ZStq0Vf/images.jpg" alt="hotel" class="h-24 w-24 rounded-lg">
+                        </div>
+                    </div>
+                    <!-- review 2 -->
+                    <hr>
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2 items-center">
+                                <span class="text-gray-300 text-2xl"><i class="fa-solid fa-circle-user"></i></span>
+                                <span class="text-gray-700 font-bold">Ross Mark</span>
+                                <span class="text-xs text-gray-500">18 April 2024</span>
+                            </div>
+                            <div class="bg-green-400 p-2 rounded space-x-2 text-white font-bold text-xs">
+                                5 <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 py-4 text-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam facilis molestias, assumenda
+                            animi
+                            vitae dolore eaque. Alias quas nisi velit.
+                        </p>
+
+                        <div class="">
+                            <img src="https://i.ibb.co/cNBqhF1/pet-hotel.jpg" alt="hotel" class="h-24 w-24 rounded-lg">
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline rounded">See more reviews</button>
+                </div>
+
+                <!-- choosen room -->
+                <div>
+                    <p class="text-2xl font-bold pt-8 pb-4">Choose your room</p>
+                    <!-- ttle bar -->
+                    <div class="hidden sm:block bg-gray-600 p-2 rounded-t-lg text-white font-bold">
+                        <span class="text-green-500"><i class="fa-solid fa-square-check"></i></span>
+                        Selected category
+                    </div>
+                    <!-- upper part -->
+                    <div class="flex gap-4 flex-row justify-between sm:border-x-[1px] sm:border-gray-300 sm:p-4">
+                        <!-- information -->
+                        <div class="flex flex-col sm:justify-between">
+                            <div class="">
+                                <p class="sm:text-xl md:text-2xl font-bold text-gray-700">Classic</p>
+                                <p class="text-sm sm:text-lg text-gray-500">Room size 100 sqft</p>
+                            </div>
+                            <div class="flex gap-4 items-center text-sm sm:text-[16px]">
+                                <div>
+                                    <i class="fa-solid fa-wind"></i>
+                                    <span>AC</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-tv"></i>
+                                    <span>TV</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- picture -->
+                        <div>
+                            <img src="https://i.ibb.co/ZStq0Vf/images.jpg" alt="room"
+                                class="w-24 h-24 sm:w-32 md:w-48 sm:h-24 md:h-32 rounded">
+                        </div>
+                    </div>
+                    <!-- lower part -->
+                    <div class="sm:flex sm:justify-between sm:border-[1px] sm:border-gray-300 sm:p-4 sm:rounded-b-lg">
+                        <!-- information -->
+                        <div class="pb-4">
+                            <span class="font-bold">
+                                <i class="fa-solid fa-bangladeshi-taka-sign"></i>
+                                1100
+                            </span>
+                            <del class="text-xs"><span>550</span></del>
+                            <span class="text-sm text-green-400">50% off</span>
+                        </div>
+                        <!-- badge -->
+                        <div>
+                            <div class="w-fit uppercase px-3 py-2 border-[1px] border-gray-300 rounded">
+                                <span class="text-green-500"><i class="fa-solid fa-square-check"></i></span>
+                                selected
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- ---------------payment left side sticky box----------------- -->
+            <div>
+                <div class="w-full md:w-[320px] lg:w-96 rounded-lg md:shadow-lg my-8 md:sticky md:top-[100px]">
+                    <div class="flex gap-4 justify-between bg-red-400 py-2 px-4 rounded-t-lg">
+                        <p class="text-white font-semibold">login now to get upto 15% lower price</p>
+                        <button class="btn btn-sm rounded">Log in</button>
+                    </div>
 
-            <p class="text-lg text-gray-700 mt-5">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nesciunt voluptate quas soluta numquam
-                facilis ipsum nam! Debitis eos voluptates quasi ea praesentium tenetur id minima, dolore, ad cumque vero
-                est, ratione neque laudantium totam. Deserunt aliquid voluptatibus blanditiis sint modi dolorem fugiat
-                atque unde? Placeat quisquam natus qui voluptate.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At minus natus autem molestias eum, aperiam
-                dolor cupiditate earum doloribus quae quia odit illum a accusantium necessitatibus eligendi quis
-                corporis tempore sunt perferendis? Consequatur veritatis quibusdam ipsum dolor explicabo. Quibusdam
-                expedita id atque et, distinctio sint obcaecati sit quae quidem officia.
-            </p>
+                    <div class="md:px-4 pb-4">
+                        <div class="py-4">
+                            <span class="font-bold text-2xl">
+                                <i class="fa-solid fa-bangladeshi-taka-sign"></i>
+                                1100
+                            </span>
+                            <del class="text-sm"><span>550</span></del>
+                            <span class="text-green-400">50% off</span>
+                        </div>
 
-            <div class="flex justify-center gap-4 flex-col items-center md:flex-row py-12">
-                <!-- plan 1 -->
-                <div class="bg-slate-100 w-fit px-6 py-8 rounded-lg shadow-lg space-y-4">
-                    <div class="flex justify-between items-center">
-                        <p class="font-bold text-2xl">Regular</p>
-                        <p class="text-sm">BDT: 1000</p>
-                    </div>
-                    <div class="space-y-2">
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                    </div>
-                    <div class="flex justify-center w-full">
-                        <a href="./package.html" class="btn btn-outline rounded-full">Get this plan</a>
-                    </div>
-                </div>
-                <!-- plan 2 -->
-                <div class="bg-slate-100 w-fit px-6 py-8 rounded-lg shadow-lg space-y-4">
-                    <div class="flex justify-between items-center">
-                        <p class="font-bold text-2xl">Delux</p>
-                        <p class="text-sm">BDT: 3000</p>
-                    </div>
-                    <div class="space-y-2">
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                    </div>
-                    <div class="flex justify-center w-full">
-                        <a href="./package.html" class="btn btn-outline rounded-full">Get this plan</a>
-                    </div>
-                </div>
-                <!-- plan 3 -->
-                <div class="bg-slate-100 w-fit px-6 py-8 rounded-lg shadow-lg space-y-4">
-                    <div class="flex justify-between items-center">
-                        <p class="font-bold text-2xl">Luxary</p>
-                        <p class="text-sm">BDT: 5000</p>
-                    </div>
-                    <div class="space-y-2">
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                        <p><span class="text-green-400"><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit
-                            amet.</p>
-                    </div>
-                    <div class="flex justify-center w-full">
-                        <a href="./package.html" class="btn btn-outline rounded-full">Get this plan</a>
+                        <div
+                            class="p-4 shadow-md border-gray-200 border-[1px] flex justify-between font-semibold text-sm sm:text-[16px]">
+                            <div>Mon, 4 Jul - Tue, 5 Jul</div>
+                            <div>1 Room, 1 Guest</div>
+                        </div>
+
+                        <div class="my-4 p-4 shadow-md border-gray-200 border-[1px] flex justify-between font-semibold">
+                            <div>
+                                <i class="fa-solid fa-landmark"></i>
+                                Classic
+                            </div>
+                            <div class="text-red-400">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                        </div>
+
+                        <div class="my-4 p-4 shadow-md border-gray-200 border-[1px] flex justify-between">
+                            <div class="text-sm sm:text-[16px]">
+                                <span class="text-yellow-400"><i class="fa-solid fa-certificate"></i></span>
+                                WELCOME75 cupon applied
+                            </div>
+                            <div>
+                                <span class="font-bold">- <i class="fa-solid fa-bangladeshi-taka-sign"></i> 510</span>
+                                <span class="text-green-400"><i class="fa-solid fa-square-check"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between px-4">
+                            <p>Your saving</p>
+                            <p class="font-bold">
+                                - <i class="fa-solid fa-bangladeshi-taka-sign"></i> 510
+                                <span class="text-white"><i class="fa-solid fa-square-check"></i></span>
+                            </p>
+                        </div>
+
+                        <div class="flex justify-between p-4">
+                            <div>
+                                <p>Total price</p>
+                                <p class="text-xs text-gray-500">Including Tax</p>
+                            </div>
+                            <p class="font-bold">
+                                <i class="fa-solid fa-bangladeshi-taka-sign"></i> 1100
+                                <span class="text-white"><i class="fa-solid fa-square-check"></i></span>
+                            </p>
+                        </div>
+
+                        <div>
+                            <button class="btn bg-green-400 w-full text-white text-xl">Continue to Book</button>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#" class="text-red-500 font-semibold">
+                                Cancellation Policy
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- contact form -->
     </section>
